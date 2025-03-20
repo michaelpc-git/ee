@@ -3,7 +3,7 @@
 Plugin Name: ICS Calendar
 Plugin URI: https://icscalendar.com
 Description: Turn your Google Calendar, Microsoft Office 365 or Apple iCloud Calendar into a seamlessly integrated, auto-updating, zero-maintenance WordPress experience.
-Version: 11.5.7
+Version: 11.5.1.3
 Requires at least: 4.9
 Requires PHP: 7.0
 Author: Room 34 Creative Services, LLC
@@ -15,22 +15,18 @@ Domain Path: /i18n/languages/
 */
 
 /*
-  Copyright 2025 Room 34 Creative Services, LLC. (Email: info@room34.com)
+  Copyright 2024 Room 34 Creative Services, LLC (email: info@room34.com)
 
-	This program is free software; you can redistribute it and/or modify it under the terms
-	of the GNU General Public License, version 2, as published by the Free Software
-	Foundation.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License, version 2, as 
+	published by the Free Software Foundation.
 
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY
-	WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-	PARTICULAR PURPOSE. See the GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
 
 	https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-	
-	NOTE: The ICS Calendar and ICS Calendar Pro names, logos, and related branding assets
-	are trademarks of Room 34 Creative Services, LLC and may not be used without permission.
-	They are distributed with this software for the purpose of identification only. Reuse or
-	redistribution of these assets is NOT covered by the GPL, and is hereby prohibited.
 */
 
 
@@ -77,52 +73,16 @@ if (!class_exists('R34ICS')) {
 		load_plugin_textdomain('ics-calendar', false, basename(plugin_dir_path(__FILE__)) . '/i18n/languages/');
 	}
 	add_action('init', 'r34ics_load_plugin_textdomain', 1 - PHP_INT_MAX);
-
-
-	// Force loading of embedded translation files instead of community translations
-	/**
-	 * Note: This only runs just-in-time, when WordPress first encounters a translation
-	 * string for this domain, for a language that already has a community translation
-	 * file downloaded inside WP_LANG_DIR/plugins.
-	 */
-	function r34ics_load_textdomain_mofile($mofile, $domain) {
-		if ($domain == 'ics-calendar' && strpos($mofile, WP_LANG_DIR . '/plugins') !== false) {
-			$locale = apply_filters('plugin_locale', determine_locale(), $domain);
-			$locales = r34ics_i18n_locales();
-			// Only replace the locales we have translated directly within the plugin
-			if (is_array($locales) && in_array($locale, $locales)) {
-				$mofile = plugin_dir_path(__FILE__) . '/i18n/languages/' . $domain . '-' . $locale . '.mo';
-			}
-		}
-		return $mofile;
-	}
-	add_filter('load_textdomain_mofile', 'r34ics_load_textdomain_mofile', 10, 2);
-
-	
-	// Get list of translated locales
-	function r34ics_i18n_locales() {
-		$locales = get_option('r34ics_i18n_locales');
-		if (empty($locales)) {
-			$locales = array();
-			if (!function_exists('list_files')) {
-				include_once(ABSPATH . 'wp-admin/includes/file.php');
-			}
-			$files = list_files(plugin_dir_path(__FILE__) . '/i18n/languages', 1);
-			foreach ((array)$files as $file) {
-				if (pathinfo($file, PATHINFO_EXTENSION) == 'mo') {
-					$locales[] = str_replace('ics-calendar-', '', pathinfo($file, PATHINFO_FILENAME));
-				}
-			}
-			update_option('r34ics_i18n_locales', $locales);
-		}
-		return $locales;
-	}	
 	
 	
-	// Install/activate
+	// Install
+	register_activation_hook(__FILE__, 'r34ics_install');
 	function r34ics_install() {
 		global $R34ICS;
 	
+		// Flush rewrite rules
+		flush_rewrite_rules();
+		
 		// Remember previous version
 		$previous_version = get_option('r34ics_version');
 		update_option('r34ics_previous_version', $previous_version);
@@ -143,26 +103,17 @@ if (!class_exists('R34ICS')) {
 			$r34ics_deferred_admin_notices = get_option('r34ics_deferred_admin_notices', array());
 		}
 	
+		// Admin notice with link to settings
+		$r34ics_deferred_admin_notices['r34ics_first_load'] = array(
+			/* translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag */
+			'content' => '<p>' . sprintf(esc_html__('Thank you for installing %1$s. Before creating your first calendar shortcode, please visit your %2$sGeneral Settings%3$s page and verify that your site language, timezone and date/time format settings are correct. See our %4$sUser Guide%5$s for more information.', 'ics-calendar'), '<strong>ICS Calendar</strong>', '<a href="' . admin_url('options-general.php') . '">', '</a>', '<a href="https://icscalendar.com/general-wordpress-settings/" target="_blank">', '</a>') . '</p>',
+			'status' => 'info',
+			'dismissible' => 'forever',
+		);
+		
 		// Save deferred admin notices
 		update_option('r34ics_deferred_admin_notices', $r34ics_deferred_admin_notices);
-		
-		// Flush rewrite rules
-		flush_rewrite_rules();
-		
-		// Set options for first run redirect (runs on admin_init hook, below)
-		update_option('r34ics_admin_first_run', true);
-		update_option('r34ics_activation_redirect', true);
 	}
-	register_activation_hook(__FILE__, 'r34ics_install');
-	
-	// Redirect to Getting Started page with first run message
-	add_action('admin_init', function() {
-		if (get_option('r34ics_activation_redirect')) {
-			update_option('r34ics_activation_redirect', false);
-			wp_safe_redirect(admin_url('admin.php?page=ics-calendar'));
-			exit;
-		}
-	}, PHP_INT_MAX - 1);
 	
 	
 	// Updates

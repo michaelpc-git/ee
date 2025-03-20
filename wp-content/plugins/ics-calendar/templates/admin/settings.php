@@ -6,7 +6,7 @@
 </p>
 
 <p class="r34ics-input">
-	<label for="r34ics_ajax_bypass_nonce"><input type="checkbox" name="ajax_bypass_nonce" id="r34ics_ajax_bypass_nonce"<?php if (get_option('r34ics_ajax_bypass_nonce')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Bypass nonce on AJAX requests (recommended with caching plugins)', 'ics-calendar'); ?></strong></label>
+	<label for="r34ics_ajax_bypass_nonce"><input type="checkbox" name="ajax_bypass_nonce" id="r34ics_ajax_bypass_nonce"<?php if (get_option('r34ics_ajax_bypass_nonce')) { echo ' checked="checked"'; } ?> /> <strong><?php esc_html_e('Bypass nonce on AJAX requests', 'ics-calendar'); ?></strong></label>
 	<span class="description"><small class="r34ics-help"><span class="help_content"><?php
 	/* translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate) */
 	printf(esc_html__('By default, %1$s uses a nonce on AJAX requests, although this is not strictly needed, as the AJAX requests do not directly write anything to the database, and additional sanitization/validation code is in place. The nonce occasionally causes conflicts with certain caching plugins, especially %2$s. If you are using a caching plugin and find your AJAX calendars occasionally do not load, turn on this option to bypass the nonce.', 'ics-calendar'), 'ICS Calendar', 'LiteSpeed Cache');
@@ -47,10 +47,7 @@
 	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag */
 	printf(esc_html__('If your calendar server is hosted on the same physical server as your website, is part of the same local network, or otherwise uses a %1$sreserved IP address%2$s, enter its hostname here to allow access. For multiple calendar servers, enter one hostname per line. See %3$sthe %4$s documentation%5$s for more information.', 'ics-calendar'), '<a href="https://en.wikipedia.org/wiki/Internet_Protocol_version_4#Special-use_addresses" target="_blank">', '</a>', '<a href="https://icscalendar.com/developer/#http_request_host_is_external" target="_blank">', 'ICS Calendar', '</a>');
 	?></span></small></span><br />
-	<small><?php
-	/* translators: 1. HTML tag 2. HTML tag 3. HTML tag */
-	printf(esc_html__('Enter one hostname per line. Hostnames are the base domain name, not a full URL. %1$s For example, you would enter %2$s, not %3$s.', 'ics-calendar'), '<br />', '<code style="font-size: 100%;">example.com</code>', '<code style="font-size: 100%;">https://example.com/path/</code>');
-	?></small>
+	<small><?php esc_html_e('Enter one hostname per line.', 'ics-calendar'); ?></small>
 </p>
 
 <?php do_action('r34ics_settings_fields_loading'); ?>

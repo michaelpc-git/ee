@@ -434,3 +434,28 @@
 [2025-03-20 14:04:43 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-03-20 14:09:49 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-03-20 14:09:56 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-20 16:53:52 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-20 16:54:16 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 
+[2025-03-20 17:01:28 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:01:48 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-20 17:06:14 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:25:57 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:27:03 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:28:25 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: wp_trash_post 
+[2025-03-20 17:28:25 : INFO] - Cache for URL: http://localhost:10013/?page_id=262 has been purged, triggered by action: save_post 
+[2025-03-20 17:28:29 : INFO] - Cache for URL: http://localhost:10013/?page_id=1042 has been purged, triggered by action: save_post 
+[2025-03-20 17:28:58 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:29:27 : INFO] - Cache for URL: http://localhost:10013/?page_id=1045 has been purged, triggered by action: save_post 
+[2025-03-20 17:29:59 : INFO] - Cache for URL: http://localhost:10013/events-calendar/ has been purged, triggered by action: save_post 
+[2025-03-20 17:30:56 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: wp_trash_post 
+[2025-03-20 17:30:57 : INFO] - Cache for URL: http://localhost:10013/?page_id=1042 has been purged, triggered by action: save_post 
+[2025-03-20 17:31:01 : INFO] - Cache for URL: http://localhost:10013/events-calendar/ has been purged, triggered by action: wp_trash_post 
+[2025-03-20 17:31:01 : INFO] - Cache for URL: http://localhost:10013/?page_id=1045 has been purged, triggered by action: save_post 
+[2025-03-20 17:31:09 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-20 17:31:17 : INFO] - Cache for URL: http://localhost:10013/?page_id=1049 has been purged, triggered by action: save_post 
+[2025-03-20 17:31:45 : INFO] - Cache for URL: http://localhost:10013/events/ has been purged, triggered by action: save_post 
+[2025-03-20 17:32:39 : INFO] - Cache for URL: http://localhost:10013/events/ has been purged, triggered by action: wp_trash_post 
+[2025-03-20 17:32:39 : INFO] - Cache for URL: http://localhost:10013/?page_id=1049 has been purged, triggered by action: save_post 
+[2025-03-20 17:37:48 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-20 17:38:13 : INFO] - Cache for URL: http://localhost:10013/?page_id=1052 has been purged, triggered by action: save_post 
+[2025-03-20 17:38:36 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 

@@ -100,6 +100,7 @@ flex-grow: 1;
 }
 .submit h3 {
 margin-top: 5px;
+transform: scaleX(1.1);
 }
 .desktop-only {
 display: none !important;
@@ -144,7 +145,7 @@ display: none !important;
     display: none !important;
 }
 .submit h3 {
-    letter-spacing: 1px;
+    transform: scaleX(1.1);
 }
 }
 
@@ -215,7 +216,9 @@ border-image-width: 1.5 !important;
 border-image-outset: 5px;
 clip-path: inset(-5px 0px -5px 0px);
 }
-
+.submit h3 {
+    transform: scaleX(1.1);
+}
 .desktop-only {
 display: flex !important;
 }

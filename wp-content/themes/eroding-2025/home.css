@@ -58,7 +58,7 @@ align-self: center;
 }
 
 /*TABLET STYLING*/
-@media only screen and (min-width: 767px) and (max-width:1024px){
+@media only screen and (min-width: 767px) and (max-width:1366px) {
 .squat-radar-widget {
 flex-direction: row;
 flex-wrap: wrap;
@@ -68,7 +68,7 @@ font-size: 12px;
 flex-wrap: wrap;
 max-height: 420px;
 overflow: hidden;
-width: calc(100vw - 3rem);
+width: 100%;
 padding-left: 1rem;
 padding-right: 1rem;
 }
@@ -109,7 +109,7 @@ img[src=""] {
 
 
 /*DESKTOP STYLING*/
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1367px){
 .squat-radar-widget {
 flex-direction: row;
 flex-wrap: wrap;
