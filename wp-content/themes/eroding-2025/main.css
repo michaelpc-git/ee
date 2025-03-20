@@ -158,7 +158,7 @@ display: none !important;
 }
 
 main {
-width: auto;
+width: 100%;
 max-width: 1366px;
 margin-top: calc(90px + 1rem) !important;
 margin-left: calc(200px + 2rem) !important;
