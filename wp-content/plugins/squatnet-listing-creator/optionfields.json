@@ -1,0 +1,50 @@
+{
+	"settings_basic": {
+		"slug": "basic_settings",
+		"desc": "Basic settings for funtionality",
+		"fields": {
+			"username": {
+				"slug": "username",
+				"name": "Username",
+				"type": "text"
+			},
+			"password": {
+				"slug": "password",
+				"name": "Password",
+				"type": "password"
+			},
+			"group_uuid": {
+				"slug": "group_uuid",
+				"name": "Group UUID",
+				"type": "text",
+				"desc": "Go to <a href=\"https://radar.squat.net/api/1.2/search/groups.json?keys=\">https://radar.squat.net/api/1.2/search/groups.json?keys=[YOUR GROUP NAME HERE]</a> to find the uuid for your group. It should look something like '20299005-0477-48ca-86f9-e0e69db672c0'. You need this to create events as requests to your group rather than general squat.net listings."
+			},
+			"geographic_area": {
+				"slug": "geographic_area",
+				"name": "Geographic Area",
+				"desc": "The general area where your events will be located",
+				"type": "geoselect"
+			}
+		}
+	},
+	"settings_advanced": {
+		"slug": "advanced_settings",
+		"desc": "Advanced settings for developers or people who know what they're doing",
+		"fields": {
+			"api_timeout": {
+				"slug": "api_timeout",
+				"name": "API Timeout",
+				"desc": "Adjust this if you have many failed create events",
+				"type": "text",
+				"default": 5000
+			},
+			"api_url": {
+				"slug": "api_url",
+				"name": "API URL",
+				"desc": "Only change from the default if you have an alternative API to call",
+				"type": "url",
+				"default": "https://radar.squat.net/api/1.2/"
+			}
+		}
+	}
+}

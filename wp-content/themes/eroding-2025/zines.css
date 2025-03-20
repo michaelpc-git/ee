@@ -1,0 +1,52 @@
+/*MOBILE-FIRST STYLING*/
+.zine-main {
+    font-size: 12px;
+}
+.zine-image {
+    width: 130px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-top: 1rem;
+}
+.zine-content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+}
+.zine-content h2 {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+.zine-content .wp-block-buttons {
+    align-self: center;
+}
+.zine-quote {
+    font-size: 0.8rem !important;
+}
+.zine-weblink a{
+    font-size: 0.8rem !important;
+    padding: calc(.5em + 2px) calc(1em + 2px) !important;
+    background-color: #000000;
+}
+
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px){
+.zine-main {
+    font-size: 14px;
+}
+.zine-image {
+    width: 400px;
+}
+.zine-content {
+    padding: 10rem;
+}
+.zine-quote {
+    font-size: 1rem !important;
+}
+.zine-weblink a{
+    font-size: 1rem !important;
+}
+}

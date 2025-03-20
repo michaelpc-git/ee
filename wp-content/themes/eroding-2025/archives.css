@@ -1,0 +1,51 @@
+/*MOBILE-FIRST STYLING*/
+.archive-main {
+    margin-top: 2rem;
+}
+.archive-item {
+    border: 5px solid transparent;
+    border-image-width: 1.5 !important;
+    border-image-outset: 5px !important;
+    border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
+    padding: 1rem;
+    background-color: #000;
+    height:100%;
+}
+.archive-item#sls {
+    background-color: #ffffd2;
+    color: #111;
+}
+.archive-item#sls:hover {
+    color: #615135;
+    transition: 300ms ease-in-out;
+}
+.archive-item#scumfest:hover {
+    color: #cf2e2e;
+    transition: 300ms ease-in-out;
+}
+.archive-item figure {
+    width: 75%;
+}
+
+.archive-item h3 {
+    font-family: 'Special Elite';
+    font-size: 1.4rem;
+}
+
+/*SLS AND SCUMFEST GALLERIES*/
+.modula-gallery {
+    margin-top: 2rem;
+}
+
+/*TABLET STYLING*/
+@media only screen and (min-width: 767px) and (max-width:1024px){
+.wp-block-group.archive-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+/*DESKTOP STYLING*/
+@media only screen and (min-width:1024px){
+.wp-block-group.archive-main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}

@@ -1,0 +1,32 @@
+{
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wpackagist-plugin/meta-box": "^5",
+        "nette/forms": "^3.1",
+        "latte/latte": "^2.11",
+        "twig/twig": "^3.0",
+        "tracy/tracy": "^2.9",
+        "guzzlehttp/guzzle": "^7.7",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/meta-box/meta-box": ["wpackagist-plugin/meta-box"]
+        }
+    },
+    "autoload": {
+        "files": [
+            "vendor/meta-box/meta-box/meta-box.php"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"name": "radar-wp/squat-radar",
+	"description": "Wordpress Calendar widget for https://radar.squat.net/ events",
+        "type": "wordpress-plugin",
+	"homepage": "https://radar.squat.net",
+	"license": "GPL-2.0+",
+	"authors": [ {
+		"name": "Radar contributors",
+                "homepage": "https://0xacab.org/radar"
+	} ],
+	"require": {
+		"php": ">=5.4.0"
+	}
+}

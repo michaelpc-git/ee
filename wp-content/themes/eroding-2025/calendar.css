@@ -1,0 +1,125 @@
+/*Calendar*/
+td {
+	font-size: 90%!important;
+}
+.day {
+	color: #333;
+}
+
+.ics-calendar-arrow-nav > .prev {
+	color: #945aff !important;
+}
+.ics-calendar-arrow-nav > .next {
+	color: #945aff !important;
+}
+.ics-calendar-arrow-nav > .prev:hover {
+	color: #f42828 !important;
+}
+.ics-calendar-arrow-nav > .next:hover {
+	color: #f42828 !important;
+}
+
+.r34ics_lightbox .r34ics_lightbox_inner {
+	width: 100% !important;
+	max-height: 800px !important;
+}
+.r34ics_lightbox .r34ics_lightbox_content {
+	border: 5px solid transparent;
+    border-image-width: 1.5 !important;
+    border-image-outset: 5px !important;
+    border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
+}
+
+.r34ics_lightbox .eventdesc {
+	margin-top: 1em;
+}
+.ics-calendar .event {
+	background-color: #efe6ff;
+	border-left: 4px solid #945aff;
+	border-bottom: 1px solid #e2d2ff !important;
+}
+.ics-calendar .event:hover {
+	background-color: #f4c9c9;
+	border-left: 4px solid #f42828;
+	transition: 300ms ease-in-out !important;
+}
+.r34ics_lightbox_close {
+    line-height: 44px !important;
+	right: 10px !important;
+	background-color: #945aff !important;
+}
+.r34ics_lightbox_close:hover {
+	background-color: #f42828 !important;
+	transition: ease-in-out 300ms !important;
+}
+.r34ics_lightbox_content .location {
+	padding-bottom: 1em;
+	border-bottom: 1px solid black
+}
+.r34ics_lightbox_content .eventdesc .eventurl {
+	padding-top: 1em;
+	border-top: 1px solid black;
+}
+.r34ics_lightbox_content .eventdesc p {
+	margin-bottom: auto;
+}
+.r34ics_lightbox_content .eventdesc p br {
+	margin-bottom: 1em;
+}
+.r34ics_lightbox .r34ics_lightbox_content {
+		left: 5% !important;
+		right: 5% !important;
+}
+
+.r34ics_lightbox .r34ics_lightbox_content .date_in_hover_block, .r34ics_lightbox .r34ics_lightbox_content .time_in_hover_block {
+	font-weight: 600;
+}
+
+:where(figure).attach {
+	margin: 2em 0 1em 0 !important;
+}
+
+ /*calendar desktop stuff*/
+@media only screen and (min-width: 1280px) {
+    .ics-calendar-month-grid td {
+        height: 4rem !important;
+    }
+    .ics-calendar-month-grid th {
+        text-transform: none !important;
+    }
+    .r34ics_lightbox .r34ics_lightbox_inner {
+		max-width: 1366px !important;
+	}
+	.r34ics_lightbox .r34ics_lightbox_inner .eventdesc {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-rows: auto 1fr;
+		max-width: 100%;
+		column-count: 2;
+		gap: 1rem;
+	}
+	.r34ics_lightbox .r34ics_lightbox_inner .eventdesc p {
+		width: 100%;
+		margin-right: 1rem;
+	}
+	.r34ics_lightbox .r34ics_lightbox_inner .eventdesc.eventurl {
+		width: 100%;
+		margin-right: 1rem;
+	}
+	.r34ics_lightbox .r34ics_lightbox_inner .eventdesc figure {
+		width: 320px;
+		max-width: 320px;
+		grid-row-start: 1;
+		grid-row-end: 3;
+
+	}
+	.r34ics_lightbox .r34ics_lightbox_content {
+		text-align: justify;
+		padding: 3em !important;
+	}
+	:where(figure).attach {
+	margin: 1rem !important;
+	}
+	.r34ics_lightbox_close {
+	right: 45px !important;
+}

@@ -1,0 +1,56 @@
+.SquatnetListingCreator * {
+	box-sizing: border-box;
+}
+
+.SquatnetListingCreator_dates, .SquatnetListingCreator > form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.SquatnetListingCreator > form{
+	width: 100%;
+	display: flex;
+	padding: 10px;
+	margin: 40px -10px;
+	flex-wrap: wrap;
+}
+
+.SquatnetListingCreator_col-2-3, .SquatnetListingCreator_col-1-3, .SquatnetListingCreator_fullwidth {
+	width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+	.SquatnetListingCreator_col-2-3 {
+		width: 66.666666%;
+	}
+
+	.SquatnetListingCreator_col-1-3 {
+		width: 33.333333%;
+	}
+}
+
+.SquatnetListingCreator_input {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.SquatnetListingCreator_input {
+	max-width: auto;
+}
+
+@media screen and (min-width: 720px) {
+	.SquatnetListingCreator_input {
+		width: calc(100% - 20px);
+	}
+}
+
+.SquatnetListingCreator_dates .SquatnetListingCreator_input {
+	width: 50%;
+}
+
+.SquatnetListingCreator_input .choices, .SquatnetListingCreator_input input {
+	color: black;
+}

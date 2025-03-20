@@ -1,0 +1,77 @@
+/*MOBILE-FIRST STYLING*/
+.SquatnetListingCreator > form {
+    margin: 0;
+    padding: 0;
+}
+
+.SquatnetListingCreator * {
+    border: none;
+    outline: none;
+}
+
+.SquatnetListingCreator_input {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.SquatnetListingCreator_input input, .SquatnetListingCreator_input select {
+    border-radius: 5px;
+    line-height: 1.8;
+}
+
+.SquatnetListingCreator_col-1-3, .SquatnetListingCreator_col-2-3 {
+    width: 100%;
+}
+
+.SquatnetListingCreator_dates .SquatnetListingCreator_input {
+    width: calc(50% - 13px);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.SquatnetListingCreator_description .SquatnetListingCreator_input textarea {
+    min-height: 110px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.125), 1rem);
+}
+
+.SquatnetListingCreator_input input[type=file] {
+    color: #fff;
+}
+
+.SquatnetListingCreator_input input[type=submit] {
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #cf2e2e;
+    color: #fff;
+    margin-top: 1rem;
+    font-family: 'Special Elite';
+    font-size: 1.4rem;
+    padding-top: 4px;
+    line-height: 1.4rem;
+    border: 5px solid transparent;
+    border-image: url(/wp-content/uploads/2025/02/torn-red.png) 20 round;
+    border-image-width: 1.5 !important;
+    border-image-outset: 5px;
+}
+.radar-column {
+     border: 5px solid transparent;
+    border-image-width: 1.5 !important;
+    border-image-outset: 5px !important;
+    border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
+    background-color: #fff;
+    color: #151515;
+}
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px) {
+.SquatnetListingCreator_input input[type=submit] {
+    margin-left: 19px;
+}
+.radar-column {
+    margin-top: 1rem !important;
+}
+}

@@ -1,0 +1,226 @@
+/*GENERAL SETUP*/
+html {
+font-size: 14px;
+}
+a:hover {
+transition: ease-in-out 300ms;
+}
+:where(.wp-site-blocks :focus) {
+    outline-width: 0 !important;
+    outline-style: none !important;
+}
+
+/*MOBILE-FIRST STYLING*/
+header {
+position: fixed;
+z-index: 9999;
+width: 100%;
+border-bottom: 10px solid transparent;
+border-image: url(/wp-content/uploads/2025/02/tornpaper-edge.webp) 20 round !important;
+border-image-width: 1.5 !important;
+filter: drop-shadow(0 20px 1em rgba(0, 0, 0, 0.5));
+}
+header h1 a:hover {
+    text-decoration: none;
+}
+header h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.contact-button {
+margin-left: auto !important;
+}
+
+main {
+width: 100%;
+margin-top: 90px !important;
+margin-bottom: 90px !important;
+padding: 1rem;
+}
+
+main h1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+main h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+footer {
+position: fixed;
+bottom: -1px;
+z-index: 9998;
+height: 75px;
+width: 100%;
+border-right: none;
+border-top: 2px solid #945aff;box-shadow: 0 0 10px white;
+clip-path: inset(-10px 0px 0px 0px);
+}
+.footer-nav {
+flex-direction: row !important;
+height: 100%;
+width: 100%;
+margin-top: 0px;
+gap: 0 !important;
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+.footer-nav .wp-block-tiptip-hyperlink-group-block {
+width: 100% !important;
+}
+.wp-block-tiptip-hyperlink-group-block:hover {
+color: #945aff;
+}
+.nav-item {
+flex-basis: 20%;
+flex-shrink: 0;
+gap: 0 !important;
+}
+.nav-item p {
+font-size: 1.6rem;
+}
+.submit-link {
+    flex-basis: 150%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.submit {
+background-color: #cf2e2e;
+border: 5px solid transparent;
+border-image: url(/wp-content/uploads/2025/02/torn-red.png) 20 round;
+border-image-width: 1.5 !important;
+border-image-outset: 5px;
+/*clip-path: inset(0px -5px 0px -5px);*/
+flex-grow: 1;
+}
+.submit:hover {
+    color: white;
+}
+.submit h3 {
+margin-top: 5px;
+}
+.desktop-only {
+display: none !important;
+}
+
+/*Pill buttons*/
+.wp-block-button a {
+	filter: drop-shadow(0 0 3px #945aff);
+    background-color: #111;
+	color: #f9f9f9;
+    transition: ease-in-out 300ms;
+}
+.wp-block-button a:hover {
+	background-color: #f9f9f9;
+	color: #cf2e2e;
+	filter: drop-shadow(0 0 3px #cf2e2e);
+	transition: ease-in-out 300ms;
+}
+
+/*Gtranslate block*/
+@media only screen and (max-width:1024px){
+#gt_float_wrapper {
+    bottom: 90px !important;
+}
+.gt_float_switcher {
+	font-size: 1em !important;
+}
+.gt_float_switcher img {
+	width: 25px !important;
+}
+.gt_float_switcher .gt_options a, .gt_float_switcher .gt-selected .gt-current-lang {
+	padding: 5px !important;
+}
+}
+
+/*TABLET STYLING*/
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+.desktop-only {
+    display: block !important;
+}
+.mobile-only {
+    display: none !important;
+}
+.submit h3 {
+    letter-spacing: 1px;
+}
+}
+
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px){
+.contact-button > div {
+    flex-direction: row;
+    gap: 1em;
+}
+
+main {
+width: auto;
+max-width: 1366px;
+margin-top: calc(90px + 1rem) !important;
+margin-left: calc(200px + 2rem) !important;
+margin-bottom: 0 !important;
+}
+footer {
+position: fixed;
+bottom: unset;
+z-index: 9998;
+margin-top: 80px !important;
+height: calc(100vh - 80px);
+width: 200px;
+border-right: 2px solid #945aff;
+border-top: none;
+box-shadow: 0 0 10px white;
+clip-path: inset(0px -10px 3px 0px);
+}
+.footer-nav {
+padding-top: calc(10px + 1rem);
+padding-left: 0;
+padding-right: 0;
+width: 200px;
+height: 100%;
+flex-direction: column !important;
+justify-content: flex-start !important;
+gap: 1rem !important;
+}
+.nav-item {
+flex-direction: row !important;
+flex-basis: unset;
+width: 100%;
+height: 4.5rem;
+border: 5px solid transparent;
+}
+.nav-item p {
+width: 3rem;
+text-align: center;
+padding-left: 5px;
+padding-right: 5px;
+}
+.nav-item h3 {
+text-align: left !important;
+margin-top: 7px;
+}
+.submit-link {
+    display: block;
+    flex-basis: unset;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.submit {
+background-color: #cf2e2e;
+border-image: url(/wp-content/uploads/2025/02/torn-red-top-bottom.png) 20 round;
+border-image-width: 1.5 !important;
+border-image-outset: 5px;
+clip-path: inset(-5px 0px -5px 0px);
+}
+
+.desktop-only {
+display: flex !important;
+}
+.mobile-only {
+display: none !important;
+}
+
+}

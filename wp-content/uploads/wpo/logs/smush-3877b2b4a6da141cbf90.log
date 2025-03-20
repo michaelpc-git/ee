@@ -1,0 +1,68 @@
+[2025-03-15 22:00:34 : INFO] - Re_Smush_It_Task with attachment ID : 881, autocreated on : March 15, 2025 10:00:34 
+[2025-03-15 22:00:38 : INFO] - Re_Smush_It_Task with attachment ID : 893, autocreated on : March 15, 2025 10:00:38 
+[2025-03-15 22:00:39 : INFO] - Re_Smush_It_Task with attachment ID : 894, autocreated on : March 15, 2025 10:00:39 
+[2025-03-15 22:00:43 : INFO] - Re_Smush_It_Task with attachment ID : 906, autocreated on : March 15, 2025 10:00:43 
+[2025-03-15 22:00:44 : INFO] - Re_Smush_It_Task with attachment ID : 907, autocreated on : March 15, 2025 10:00:44 
+[2025-03-15 22:00:46 : INFO] - Re_Smush_It_Task with attachment ID : 914, autocreated on : March 15, 2025 10:00:46 
+[2025-03-15 22:01:11 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-03-15 22:01:12 : INFO] - A total of 6 tasks of type smush found and will be processed in this iteration 
+[2025-03-15 22:01:12 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2025-03-15 22:01:12 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2025-03-15 22:01:12 : INFO] - Processing task with ID : 579, and type 'smush' 
+[2025-03-15 22:01:12 : INFO] - Re_Smush_It_Task with attachment ID : 881, autocreated on : March 15, 2025 10:00:34 
+[2025-03-15 22:01:12 : INFO] - File: 2014-10-24.jpg, Compression quality: 92 
+[2025-03-15 22:01:14 : INFO] - Backing up the original image - 2025/03/2014-10-24-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:16 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2014-10-24.jpg.The file was compressed from 116.72 KB to 116.72 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:16 : INFO] - Completed processing task with ID : 579, and type 'smush' 
+[2025-03-15 22:01:16 : INFO] - Processing task with ID : 580, and type 'smush' 
+[2025-03-15 22:01:16 : INFO] - Re_Smush_It_Task with attachment ID : 893, autocreated on : March 15, 2025 10:00:38 
+[2025-03-15 22:01:16 : INFO] - File: 2016-06-04.jpg, Compression quality: 92 
+[2025-03-15 22:01:20 : INFO] - Backing up the original image - 2025/03/2016-06-04-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:22 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2016-06-04.jpg.The file was compressed from 119.32 KB to 119.32 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:22 : INFO] - Completed processing task with ID : 580, and type 'smush' 
+[2025-03-15 22:01:22 : INFO] - Processing task with ID : 581, and type 'smush' 
+[2025-03-15 22:01:22 : INFO] - Re_Smush_It_Task with attachment ID : 894, autocreated on : March 15, 2025 10:00:39 
+[2025-03-15 22:01:22 : INFO] - File: 2016-07-16.jpg, Compression quality: 92 
+[2025-03-15 22:01:24 : INFO] - Backing up the original image - 2025/03/2016-07-16-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:27 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2016-07-16.jpg.The file was compressed from 88.30 KB to 88.30 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:27 : INFO] - Completed processing task with ID : 581, and type 'smush' 
+[2025-03-15 22:01:27 : INFO] - Processing task with ID : 582, and type 'smush' 
+[2025-03-15 22:01:27 : INFO] - Re_Smush_It_Task with attachment ID : 906, autocreated on : March 15, 2025 10:00:43 
+[2025-03-15 22:01:27 : INFO] - File: 2018-02-03.jpg, Compression quality: 92 
+[2025-03-15 22:01:29 : INFO] - Backing up the original image - 2025/03/2018-02-03-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:32 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2018-02-03.jpg.The file was compressed from 113.83 KB to 113.83 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:32 : INFO] - Completed processing task with ID : 582, and type 'smush' 
+[2025-03-15 22:01:32 : INFO] - Processing task with ID : 583, and type 'smush' 
+[2025-03-15 22:01:32 : INFO] - Re_Smush_It_Task with attachment ID : 907, autocreated on : March 15, 2025 10:00:44 
+[2025-03-15 22:01:32 : INFO] - File: 2018-03-03.jpg, Compression quality: 92 
+[2025-03-15 22:01:35 : INFO] - Backing up the original image - 2025/03/2018-03-03-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:37 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2018-03-03.jpg.The file was compressed from 181.41 KB to 181.41 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:37 : INFO] - Completed processing task with ID : 583, and type 'smush' 
+[2025-03-15 22:01:37 : INFO] - Processing task with ID : 584, and type 'smush' 
+[2025-03-15 22:01:37 : INFO] - Re_Smush_It_Task with attachment ID : 914, autocreated on : March 15, 2025 10:00:46 
+[2025-03-15 22:01:37 : INFO] - File: 2018-12-01.jpg, Compression quality: 92 
+[2025-03-15 22:01:41 : INFO] - Backing up the original image - 2025/03/2018-12-01-updraft-pre-smush-original.jpg 
+[2025-03-15 22:01:43 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2018-12-01.jpg.The file was compressed from 166.39 KB to 166.39 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:01:43 : INFO] - Completed processing task with ID : 584, and type 'smush' 
+[2025-03-15 22:01:43 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2025-03-15 22:01:43 : INFO] - Successfully processed the queue (smush). 6 tasks were processed out of 6. 
+[2025-03-15 22:01:43 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2025-03-15 22:01:43 : INFO] - Cleaning up tasks of type (smush). A total of 6 tasks will be deleted. 
+[2025-03-15 22:27:28 : INFO] - Re_Smush_It_Task with attachment ID : 938, autocreated on : March 15, 2025 10:27:28 
+[2025-03-15 22:27:47 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-03-15 22:27:48 : INFO] - A total of 1 tasks of type smush found and will be processed in this iteration 
+[2025-03-15 22:27:48 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2025-03-15 22:27:48 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2025-03-15 22:27:48 : INFO] - Processing task with ID : 589, and type 'smush' 
+[2025-03-15 22:27:48 : INFO] - Re_Smush_It_Task with attachment ID : 938, autocreated on : March 15, 2025 10:27:28 
+[2025-03-15 22:27:48 : INFO] - File: 2008-Scumfest.jpg, Compression quality: 92 
+[2025-03-15 22:27:49 : INFO] - Backing up the original image - 2025/03/2008-Scumfest-updraft-pre-smush-original.jpg 
+[2025-03-15 22:27:51 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/2008-Scumfest.jpg.The file was compressed from 97.00 KB to 97.00 KB, saving 0 percent, using WP-Optimize 
+[2025-03-15 22:27:51 : INFO] - Completed processing task with ID : 589, and type 'smush' 
+[2025-03-15 22:27:51 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2025-03-15 22:27:51 : INFO] - Successfully processed the queue (smush). 1 tasks were processed out of 1. 
+[2025-03-15 22:27:51 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2025-03-15 22:27:51 : INFO] - Cleaning up tasks of type (smush). A total of 1 tasks will be deleted. 
+[2025-03-16 00:02:25 : INFO] - Pruning the smush log file 
+[2025-03-19 15:48:33 : INFO] - Re_Smush_It_Task with attachment ID : 1026, autocreated on : March 19, 2025 03:48:33 
+[2025-03-19 15:48:59 : INFO] - Re_Smush_It_Task with attachment ID : 1027, autocreated on : March 19, 2025 03:48:59 

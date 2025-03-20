@@ -1,0 +1,15 @@
+/*MOBILE-FIRST STYLING*/
+.forminator-custom-form-713 {
+    width: 80% !important;
+}
+.forminator-custom-form-713 .forminator-input {
+    font-size: 1rem !important;
+}
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px){
+.forminator-custom-form-713 {
+    width: 50% !important;
+    max-width: 1080px !important;
+}
+}

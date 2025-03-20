@@ -1,0 +1,1 @@
+jQuery(document).ready((function(t){if(window.location.href.includes("page=formidable-settings")){var a=t("#hcaptcha_settings .howto");a.html(HCaptchaFormidableFormsObject.noticeLabel),t('<p class="howto">'+HCaptchaFormidableFormsObject.noticeDescription+"</p>").insertAfter(a),t("#hcaptcha_settings input").attr({disabled:!0,class:"frm_noallow"})}}));

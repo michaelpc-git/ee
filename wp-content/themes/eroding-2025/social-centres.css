@@ -1,0 +1,104 @@
+/*MOBILE-FIRST STYLING*/
+.social-centre-main {
+    position: relative;
+    gap: 0.5rem !important;
+}
+.location-header {
+    width: 100%;
+    max-height: 30px;
+    margin-top: 1rem !important;
+    padding-left: 1rem;
+}
+.location-header figure {
+    z-index: 9998 !important;
+}
+.location-header img {
+    height: 70px !important;
+    min-width: 70px !important;
+    width: 70px !important;
+    max-width: 70px !important;
+    object-fit: cover !important;
+}
+.location-header h2 {
+    padding-top: 5px;
+    font-size: 1.2rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+.location-header h2 a {
+    color: white !important;
+}
+.wp-block-cover.location-cover {
+    width: 100%;
+    min-height: 350px;
+    padding-top: 1rem;
+    align-items: flex-start;
+    font-size: 12px;
+    font-weight: 600;
+text-shadow: -1px -1px 5px black, 1px 1px 5px black ;
+}
+.location-cover img {
+    filter: blur(3px);
+}
+
+.address {
+    font-size: 1.1em;
+}
+.location-quote {
+    font-size: 1em !important;
+}
+.contact-main {
+    gap: 0.5rem !important;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+.contact-item {
+    gap: 0.5rem !important;
+}
+.contact-item h4 {
+    width: 70px;
+    font-size: 1em;
+}
+.contact-item a {
+    padding: calc(.5em + 2px) calc(1em + 2px) !important;
+    text-shadow: none;
+    font-size: 1em !important;
+    background-color: #000000;
+}
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px){
+.location-header {
+    max-height: 40px;
+    margin-top: 2rem !important;
+}
+.location-header img {
+    height: 90px !important;
+    min-width: 90px !important;
+    width: 90px !important;
+    max-width: 90px !important;
+}
+.location-header h2 {
+    font-size: 1.4rem;
+}
+.wp-block-cover.location-cover {
+    padding: 10rem;
+    gap: 2rem !important;
+    font-size: 14px;
+    min-height: 430px;
+}
+.location-cover img {
+    height: 100%;
+}
+
+.address {
+    font-size: 1.2rem;
+}
+.location-quote {
+    padding-bottom: 1rem;
+}
+.contact-main {
+    gap: 1rem !important;
+}
+}

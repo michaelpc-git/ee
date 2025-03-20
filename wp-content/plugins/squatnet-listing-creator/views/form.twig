@@ -1,0 +1,60 @@
+<div class="{{prefix}}">
+	{{ form.render('begin') }}
+	{% if submitted %}
+		<h2>Thanks for submitting your event, we'll take a look and if approved you'll see it on radar shortly</h2>
+	{% else %}
+		{% if form.errors %}
+			<div class="{{prefix}}_fullwidth">
+				<ul class="{{prefix}}_errors">
+					{% for error in form.errors %}
+						<li>{{error | raw}}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+		<div class="{{prefix}}_col-2-3">
+			<fieldset>
+				{% include 'input.twig' with {'input': form.components.title} %}
+			</fieldset>
+			<fieldset class="{{prefix}}_dates">
+				{% include 'input.twig' with {'input': form.components.start} %}
+				{% include 'input.twig' with {'input': form.components.end} %}
+			</fieldset>
+			<fieldset class="{{prefix}}_description">
+				{% include 'input.twig' with {'input': form.components.description} %}
+			</fieldset>
+		</div>
+		<fieldset class="{{prefix}}_col-1-3">
+			{# TODO: Implement poster and fyler upload functionality for event creation#}
+			{% include 'input.twig' with {'input': form.components.poster} %}
+			{#% include 'input.twig' with {'input': form.components.flyer} %#}
+			{% include 'input.twig' with {'input': form.components.type} %}
+			{% include 'input.twig' with {'input': form.components.price} %}
+			{% include 'input.twig' with {'input': form.components.fee} %}
+			{% include 'input.twig' with {'input': form.components.location} %}
+		</fieldset>
+		<div class="{{prefix}}_fullwidth">
+			<div style="display:none !important">
+			{% include 'input.twig' with {'input': form.components.cop_check} %}
+			</div>
+			{% include 'input.twig' with {'input': form.components.submit} %}
+		</div>
+		{{ nonce | raw }}
+		{{ form.render('end') }}
+	</div>
+	<script type="text/javascript">
+		var waitForChoices = setInterval(function() {
+			if(typeof Choices !== 'undefined'){
+				clearInterval(waitForChoices);
+				new Choices(
+					'.{{prefix}}_input select[name="location"]', 
+					{allowHTML: false}
+				);
+				new Choices(
+					'.{{prefix}}_input select[name="type[]"]', 
+					{allowHTML: false}
+				);
+			}
+		}, 10);
+	</script>
+{% endif %}

@@ -1,0 +1,16 @@
+/*TABLET STYLING*/
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+.wp-container-core-post-template-is-layout-1 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.location-cover {
+    padding: 2rem !important;
+}
+}
+
+/*DESKTOP STYLING*/
+@media only screen and (min-width: 1024px){
+.location-cover {
+    padding: 2rem !important;
+}
+}
