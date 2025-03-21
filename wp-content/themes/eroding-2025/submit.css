@@ -57,6 +57,11 @@
     border-image-width: 1.5 !important;
     border-image-outset: 5px;
 }
+
+.SquatnetListingCreator form h2 {
+    color: #ccff22;
+}
+
 .radar-column {
      border: 5px solid transparent;
     border-image-width: 1.5 !important;
