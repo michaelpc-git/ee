@@ -6,6 +6,10 @@ td {
 	color: #333;
 }
 
+.ics-calendar-arrow-nav {
+	line-height: 0;
+	font-size: 1.2rem;
+}
 .ics-calendar-arrow-nav > .prev {
 	color: var(--primary-accent) !important;
 }
@@ -17,6 +21,10 @@ td {
 }
 .ics-calendar-arrow-nav > .next:hover {
 	color: var(--secondary-accent) !important;
+}
+
+.ics-calendar-month-wrapper h3 {
+	font-size: 1.2rem;
 }
 
 .r34ics_lightbox .r34ics_lightbox_inner {
