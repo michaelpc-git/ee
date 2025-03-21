@@ -68,6 +68,15 @@ if ( !function_exists( 'submit_css' ) ):
 endif;
 add_action( 'wp_enqueue_scripts', 'submit_css', 10 );
 
+if ( !function_exists( 'locations_css' ) ):
+    function locations_css() {
+		if ( is_page( 'locations' ) ) {
+        wp_enqueue_style( 'locationscss', trailingslashit( get_stylesheet_directory_uri() ) . 'locations.css', array(  ) );
+		}
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'locations_css', 10 );
+
 if ( !function_exists( 'social_centres_css' ) ):
     function social_centres_css() {
 		if ( is_post_type_archive( 'social-centre' ) ) {
@@ -93,6 +102,15 @@ if ( !function_exists( 'squats_css' ) ):
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'squats_css', 10 );
+
+if ( !function_exists( 'more_css' ) ):
+    function more_css() {
+		if ( is_page( 'more' ) ) {
+        wp_enqueue_style( 'morecss', trailingslashit( get_stylesheet_directory_uri() ) . 'more.css', array(  ) );
+		}
+    }
+endif;
+add_action( 'wp_enqueue_scripts', 'more_css', 10 );
 
 if ( !function_exists( 'zines_css' ) ):
     function zines_css() {

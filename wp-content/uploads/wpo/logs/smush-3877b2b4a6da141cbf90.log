@@ -86,3 +86,70 @@
 [2025-03-21 09:13:49 : INFO] - Backing up the original image - 2025/03/cropped-EE-2025-whitetext-updraft-pre-smush-original.png 
 [2025-03-21 09:13:53 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/cropped-EE-2025-whitetext.png.The file was compressed from 69.80 KB to 46.42 KB, saving 33.5 percent, using WP-Optimize 
 [2025-03-21 09:13:53 : INFO] - Completed processing task with ID : 811, and type 'smush' 
+[2025-03-21 13:21:32 : INFO] - Re_Smush_It_Task with attachment ID : 1071, autocreated on : March 21, 2025 01:21:31 
+[2025-03-21 13:25:04 : INFO] - Re_Smush_It_Task with attachment ID : 1074, autocreated on : March 21, 2025 01:25:04 
+[2025-03-21 13:45:08 : INFO] - Re_Smush_It_Task with attachment ID : 1079, autocreated on : March 21, 2025 01:45:08 
+[2025-03-21 13:45:20 : INFO] - Re_Smush_It_Task with attachment ID : 1080, autocreated on : March 21, 2025 01:45:19 
+[2025-03-21 13:52:11 : INFO] - Re_Smush_It_Task with attachment ID : 1082, autocreated on : March 21, 2025 01:52:11 
+[2025-03-21 13:52:58 : INFO] - Re_Smush_It_Task with attachment ID : 1083, autocreated on : March 21, 2025 01:52:57 
+[2025-03-21 13:53:04 : INFO] - Re_Smush_It_Task with attachment ID : 1084, autocreated on : March 21, 2025 01:53:04 
+[2025-03-21 13:53:23 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-03-21 13:53:24 : INFO] - A total of 15 tasks of type smush found and will be processed in this iteration 
+[2025-03-21 13:53:24 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2025-03-21 13:53:24 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2025-03-21 13:53:24 : INFO] - Processing task with ID : 703, and type 'smush' 
+[2025-03-21 13:53:24 : INFO] - Task with ID 703 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:24 : INFO] - Processing task with ID : 704, and type 'smush' 
+[2025-03-21 13:53:24 : INFO] - Re_Smush_It_Task with attachment ID : 1027, autocreated on : March 19, 2025 03:48:59 
+[2025-03-21 13:53:24 : INFO] - File: cropped-EE-logo-whitebackground-transparent-1.png, Compression quality: 92 
+[2025-03-21 13:53:27 : INFO] - Backing up the original image - 2025/02/cropped-EE-logo-whitebackground-transparent-1-updraft-pre-smush-original.png 
+[2025-03-21 13:53:34 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/02/cropped-EE-logo-whitebackground-transparent-1.png.The file was compressed from 63.37 KB to 47.16 KB, saving 25.59 percent, using WP-Optimize 
+[2025-03-21 13:53:34 : INFO] - Completed processing task with ID : 704, and type 'smush' 
+[2025-03-21 13:53:34 : INFO] - Processing task with ID : 804, and type 'smush' 
+[2025-03-21 13:53:34 : INFO] - Task with ID 804 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:34 : INFO] - Processing task with ID : 805, and type 'smush' 
+[2025-03-21 13:53:34 : INFO] - Task with ID 805 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:34 : INFO] - Processing task with ID : 806, and type 'smush' 
+[2025-03-21 13:53:34 : INFO] - Task with ID 806 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:34 : INFO] - Processing task with ID : 807, and type 'smush' 
+[2025-03-21 13:53:35 : INFO] - Task with ID 807 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:35 : INFO] - Processing task with ID : 808, and type 'smush' 
+[2025-03-21 13:53:35 : INFO] - Re_Smush_It_Task with attachment ID : 1066, autocreated on : March 21, 2025 09:11:14 
+[2025-03-21 13:53:35 : INFO] - File: EE-2025-whitetext.png, Compression quality: 92 
+[2025-03-21 13:53:37 : INFO] - Backing up the original image - 2025/03/EE-2025-whitetext-updraft-pre-smush-original.png 
+[2025-03-21 13:53:43 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/EE-2025-whitetext.png.The file was compressed from 119.15 KB to 119.10 KB, saving 0.04 percent, using WP-Optimize 
+[2025-03-21 13:53:43 : INFO] - Completed processing task with ID : 808, and type 'smush' 
+[2025-03-21 13:53:43 : INFO] - Processing task with ID : 809, and type 'smush' 
+[2025-03-21 13:53:43 : INFO] - Re_Smush_It_Task with attachment ID : 1067, autocreated on : March 21, 2025 09:12:26 
+[2025-03-21 13:53:43 : INFO] - File: cropped-EE-2025-whitetext.png, Compression quality: 92 
+[2025-03-21 13:53:45 : INFO] - Backing up the original image - 2025/03/cropped-EE-2025-whitetext-updraft-pre-smush-original.png 
+[2025-03-21 13:53:51 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/cropped-EE-2025-whitetext.png.The file was compressed from 46.42 KB to 46.40 KB, saving 0.04 percent, using WP-Optimize 
+[2025-03-21 13:53:51 : INFO] - Completed processing task with ID : 809, and type 'smush' 
+[2025-03-21 13:53:51 : INFO] - Processing task with ID : 816, and type 'smush' 
+[2025-03-21 13:53:51 : INFO] - Task with ID 816 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:51 : INFO] - Processing task with ID : 819, and type 'smush' 
+[2025-03-21 13:53:51 : INFO] - Task with ID 819 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:51 : INFO] - Processing task with ID : 826, and type 'smush' 
+[2025-03-21 13:53:52 : INFO] - Task with ID 826 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:52 : INFO] - Processing task with ID : 827, and type 'smush' 
+[2025-03-21 13:53:52 : INFO] - Task with ID 827 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:52 : INFO] - Processing task with ID : 830, and type 'smush' 
+[2025-03-21 13:53:52 : INFO] - Task with ID 830 and type (smush) failed with error code invalid_file_path - The linked attachment ID does not have a valid file path 
+[2025-03-21 13:53:52 : INFO] - Processing task with ID : 831, and type 'smush' 
+[2025-03-21 13:53:52 : INFO] - Re_Smush_It_Task with attachment ID : 1083, autocreated on : March 21, 2025 01:52:57 
+[2025-03-21 13:53:52 : INFO] - File: crowbar-squats.png, Compression quality: 92 
+[2025-03-21 13:53:53 : INFO] - Backing up the original image - 2025/03/crowbar-squats-updraft-pre-smush-original.png 
+[2025-03-21 13:53:55 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/crowbar-squats.png.The file was compressed from 58.80 KB to 27.72 KB, saving 52.86 percent, using WP-Optimize 
+[2025-03-21 13:53:55 : INFO] - Completed processing task with ID : 831, and type 'smush' 
+[2025-03-21 13:53:55 : INFO] - Processing task with ID : 832, and type 'smush' 
+[2025-03-21 13:53:55 : INFO] - Re_Smush_It_Task with attachment ID : 1084, autocreated on : March 21, 2025 01:53:04 
+[2025-03-21 13:53:55 : INFO] - File: quillpen-social.png, Compression quality: 92 
+[2025-03-21 13:53:57 : INFO] - Backing up the original image - 2025/03/quillpen-social-updraft-pre-smush-original.png 
+[2025-03-21 13:53:58 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/quillpen-social.png.The file was compressed from 81.34 KB to 27.45 KB, saving 66.26 percent, using WP-Optimize 
+[2025-03-21 13:53:58 : INFO] - Completed processing task with ID : 832, and type 'smush' 
+[2025-03-21 13:53:58 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2025-03-21 13:53:58 : INFO] - Successfully processed the queue (smush). 15 tasks were processed out of 15. 
+[2025-03-21 13:53:58 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2025-03-21 13:53:58 : INFO] - Cleaning up tasks of type (smush). A total of 7 tasks will be deleted. 
+[2025-03-21 14:52:40 : INFO] - Re_Smush_It_Task with attachment ID : 1099, autocreated on : March 21, 2025 02:52:40 
+[2025-03-21 14:53:26 : INFO] - Re_Smush_It_Task with attachment ID : 1100, autocreated on : March 21, 2025 02:53:26 

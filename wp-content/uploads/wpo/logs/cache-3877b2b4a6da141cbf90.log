@@ -500,3 +500,28 @@
 [2025-03-21 08:48:16 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
 [2025-03-21 09:01:26 : INFO] - Cache for URL: http://localhost:10013/contact/ has been purged, triggered by action: save_post 
 [2025-03-21 09:15:10 : INFO] - Full Cache Purge triggered by: WPO_Page_Cache::handle_purge_single_page_cache 
+[2025-03-21 13:03:25 : INFO] - Cache for URL: http://localhost:10013/?page_id=1069 has been purged, triggered by action: save_post 
+[2025-03-21 13:04:05 : INFO] - Cache for URL: http://localhost:10013/?page_id=1070 has been purged, triggered by action: save_post 
+[2025-03-21 13:23:33 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:25:33 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:28:53 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:38:31 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:45:21 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:54:42 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:55:21 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:57:50 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 13:58:30 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:00:42 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:02:25 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:02:58 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:04:31 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:04:39 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:05:37 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:10:46 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:12:27 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:16:42 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-21 14:16:55 : INFO] - Cache for URL: http://localhost/locations/ has been purged, triggered by: WPO_Page_Cache::handle_purge_single_page_cache 
+[2025-03-21 14:40:29 : INFO] - Cache for URL: http://localhost:10013/?page_id=1097 has been purged, triggered by action: save_post 
+[2025-03-21 14:41:34 : INFO] - Cache for URL: http://localhost:10013/locations/ has been purged, triggered by action: save_post 
+[2025-03-21 14:57:03 : INFO] - Cache for URL: http://localhost:10013/more/ has been purged, triggered by action: save_post 
+[2025-03-21 14:59:58 : INFO] - Cache for URL: http://localhost:10013/more/ has been purged, triggered by action: save_post 
