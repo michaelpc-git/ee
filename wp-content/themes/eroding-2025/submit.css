@@ -45,7 +45,7 @@
     width: 33%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #cf2e2e;
+    background-color: var(--secondary-accent);
     color: #fff;
     margin-top: 1rem;
     font-family: 'Special Elite';

@@ -7,16 +7,16 @@ td {
 }
 
 .ics-calendar-arrow-nav > .prev {
-	color: #945aff !important;
+	color: var(--primary-accent) !important;
 }
 .ics-calendar-arrow-nav > .next {
-	color: #945aff !important;
+	color: var(--primary-accent) !important;
 }
 .ics-calendar-arrow-nav > .prev:hover {
-	color: #f42828 !important;
+	color: var(--secondary-accent) !important;
 }
 .ics-calendar-arrow-nav > .next:hover {
-	color: #f42828 !important;
+	color: var(--secondary-accent) !important;
 }
 
 .r34ics_lightbox .r34ics_lightbox_inner {
@@ -35,21 +35,21 @@ td {
 }
 .ics-calendar .event {
 	background-color: #efe6ff;
-	border-left: 4px solid #945aff;
+	border-left: 4px solid var(--primary-accent);
 	border-bottom: 1px solid #e2d2ff !important;
 }
 .ics-calendar .event:hover {
 	background-color: #f4c9c9;
-	border-left: 4px solid #f42828;
+	border-left: 4px solid var(--secondary-accent);
 	transition: 300ms ease-in-out !important;
 }
 .r34ics_lightbox_close {
     line-height: 44px !important;
 	right: 10px !important;
-	background-color: #945aff !important;
+	background-color: var(--primary-accent) !important;
 }
 .r34ics_lightbox_close:hover {
-	background-color: #f42828 !important;
+	background-color: var(--secondary-accent) !important;
 	transition: ease-in-out 300ms !important;
 }
 .r34ics_lightbox_content .location {

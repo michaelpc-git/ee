@@ -1,4 +1,10 @@
 /*GENERAL SETUP*/
+/*COLOURS*/
+:root {
+    --primary-accent: #8b54f0;
+    --secondary-accent: #cf2e2e;
+}
+
 html {
 font-size: 14px;
 }
@@ -53,7 +59,7 @@ z-index: 9998;
 height: 75px;
 width: 100%;
 border-right: none;
-border-top: 2px solid #945aff;box-shadow: 0 0 10px white;
+border-top: 2px solid var(--primary-accent) box-shadow: 0 0 10px white;
 clip-path: inset(-10px 0px 0px 0px);
 }
 .footer-nav {
@@ -69,7 +75,7 @@ padding-right: 0.5rem;
 width: 100% !important;
 }
 .wp-block-tiptip-hyperlink-group-block:hover {
-color: #945aff;
+color: var(--primary-accent);
 }
 .nav-item {
 flex-basis: 20%;
@@ -85,7 +91,7 @@ font-size: 1.6rem;
     padding-right: 5px;
 }
 .submit {
-background-color: #cf2e2e;
+background-color: var(--secondary-accent);
 border: 5px solid transparent;
 border-image: url(/wp-content/uploads/2025/02/torn-red.png) 20 round;
 border-image-width: 1.5 !important;
@@ -106,15 +112,15 @@ display: none !important;
 
 /*Pill buttons*/
 .wp-block-button a {
-	filter: drop-shadow(0 0 3px #945aff);
+	filter: drop-shadow(0 0 3px var(--primary-accent));
     background-color: #111;
 	color: #f9f9f9;
     transition: ease-in-out 300ms;
 }
 .wp-block-button a:hover {
 	background-color: #f9f9f9;
-	color: #cf2e2e;
-	filter: drop-shadow(0 0 3px #cf2e2e);
+	color: var(--secondary-accent);
+	filter: drop-shadow(0 0 3px var(--secondary-accent));
 	transition: ease-in-out 300ms;
 }
 
@@ -168,7 +174,7 @@ z-index: 9998;
 margin-top: 80px !important;
 height: calc(100vh - 80px);
 width: 200px;
-border-right: 2px solid #945aff;
+border-right: 2px solid var(--primary-accent);
 border-top: none;
 box-shadow: 0 0 10px white;
 clip-path: inset(0px -10px 3px 0px);
@@ -207,7 +213,7 @@ margin-top: 7px;
     padding-right: 0px;
 }
 .submit {
-background-color: #cf2e2e;
+background-color: var(--secondary-accent);
 border-image: url(/wp-content/uploads/2025/02/torn-red-top-bottom.png) 20 round;
 border-image-width: 1.5 !important;
 border-image-outset: 5px;

@@ -40,7 +40,7 @@ text-wrap: balance;
 }
 .squat-radar-category li {
 	background-color: #000000;
-	filter: drop-shadow(0 0 3px #945aff);
+	filter: drop-shadow(0 0 3px var(--primary-accent));
 	padding: calc(.5rem + 2px) calc(1rem + 2px);
 	border-radius: 25px;
 	line-height: 3rem;
@@ -134,7 +134,7 @@ margin-bottom: 0.5rem;
 }
 .squat-radar-category li {
 	background-color: #000000;
-	filter: drop-shadow(0 0 3px #945aff);
+	filter: drop-shadow(0 0 3px var(--primary-accent));
 	padding: calc(.5rem + 2px) calc(1rem + 2px);
 	border-radius: 25px;
 	line-height: 3rem;
