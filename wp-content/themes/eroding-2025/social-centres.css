@@ -28,6 +28,11 @@
 .location-header h2 a {
     color: white !important;
 }
+.social-centre-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 .wp-block-cover.location-cover {
     width: 100%;
     min-height: 350px;
@@ -46,6 +51,8 @@ text-shadow: -1px -1px 5px black, 1px 1px 5px black ;
 }
 .location-quote {
     font-size: 1em !important;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #888;
 }
 .contact-main {
     gap: 0.5rem !important;

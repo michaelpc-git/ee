@@ -459,3 +459,44 @@
 [2025-03-20 17:37:48 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-03-20 17:38:13 : INFO] - Cache for URL: http://localhost:10013/?page_id=1052 has been purged, triggered by action: save_post 
 [2025-03-20 17:38:36 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
+[2025-03-21 08:18:36 : INFO] - Cache for URL: http://localhost:10013/social-centre/the-field/ has been purged, triggered by action: save_post 
+[2025-03-21 08:18:36 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "The Field" has been purged, triggered by action: save_post 
+[2025-03-21 08:19:59 : INFO] - Cache for URL: http://localhost:10013/social-centre/mayday-rooms/ has been purged, triggered by action: save_post 
+[2025-03-21 08:19:59 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "Mayday Rooms" has been purged, triggered by action: save_post 
+[2025-03-21 08:20:23 : INFO] - Cache for URL: http://localhost:10013/social-centre/the-field/ has been purged, triggered by action: save_post 
+[2025-03-21 08:20:23 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "The Field" has been purged, triggered by action: save_post 
+[2025-03-21 08:26:49 : INFO] - Cache for URL: http://localhost:10013/social-centre/larc/ has been purged, triggered by action: save_post 
+[2025-03-21 08:26:49 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "LARC" has been purged, triggered by action: save_post 
+[2025-03-21 08:27:40 : INFO] - Cache for URL: http://localhost:10013/social-centre/decentre/ has been purged, triggered by action: save_post 
+[2025-03-21 08:27:40 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "Decentre" has been purged, triggered by action: save_post 
+[2025-03-21 08:27:58 : INFO] - Cache for URL: http://localhost:10013/social-centre/larc/ has been purged, triggered by action: save_post 
+[2025-03-21 08:27:58 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "LARC" has been purged, triggered by action: save_post 
+[2025-03-21 08:28:27 : INFO] - Cache for URL: http://localhost:10013/social-centre/the-feminist-library/ has been purged, triggered by action: save_post 
+[2025-03-21 08:28:27 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "The Feminist Library" has been purged, triggered by action: save_post 
+[2025-03-21 08:28:57 : INFO] - Cache for URL: http://localhost:10013/social-centre/housmans-bookshop/ has been purged, triggered by action: save_post 
+[2025-03-21 08:28:57 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "Housmans Bookshop" has been purged, triggered by action: save_post 
+[2025-03-21 08:29:26 : INFO] - Cache for URL: http://localhost:10013/social-centre/touchpaper-anarchist-library/ has been purged, triggered by action: save_post 
+[2025-03-21 08:29:26 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "Touchpaper Anarchist Library" has been purged, triggered by action: save_post 
+[2025-03-21 08:30:20 : INFO] - Cache for URL: http://localhost:10013/social-centre/56a-infoshop/ has been purged, triggered by action: save_post 
+[2025-03-21 08:30:20 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "56A Infoshop" has been purged, triggered by action: save_post 
+[2025-03-21 08:30:50 : INFO] - Cache for URL: http://localhost:10013/social-centre/freedom-bookshop/ has been purged, triggered by action: save_post 
+[2025-03-21 08:30:50 : INFO] - Cache for archive page associated with post_type: social-centre and Title: "Freedom Bookshop" has been purged, triggered by action: save_post 
+[2025-03-21 08:31:58 : INFO] - Cache for URL: http://localhost:10013/squat/autonomous-winter-shelter/ has been purged, triggered by action: save_post 
+[2025-03-21 08:31:58 : INFO] - Cache for archive page associated with post_type: squat and Title: "Autonomous Winter Shelter" has been purged, triggered by action: save_post 
+[2025-03-21 08:33:12 : INFO] - Cache for URL: http://localhost:10013/squat/advisory-service-for-squatters/ has been purged, triggered by action: save_post 
+[2025-03-21 08:33:12 : INFO] - Cache for archive page associated with post_type: squat and Title: "Advisory Service for Squatters" has been purged, triggered by action: save_post 
+[2025-03-21 08:34:01 : INFO] - Cache for URL: http://localhost:10013/zinedistro/another-subculture/ has been purged, triggered by action: save_post 
+[2025-03-21 08:34:01 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "Another Subculture" has been purged, triggered by action: save_post 
+[2025-03-21 08:34:19 : INFO] - Cache for URL: http://localhost:10013/zinedistro/coda-fanzine/ has been purged, triggered by action: save_post 
+[2025-03-21 08:34:19 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "COdA Fanzine" has been purged, triggered by action: save_post 
+[2025-03-21 08:34:40 : INFO] - Cache for URL: http://localhost:10013/zinedistro/squatters-of-london-action-paper/ has been purged, triggered by action: save_post 
+[2025-03-21 08:34:40 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "Squatters of London Action Paper" has been purged, triggered by action: save_post 
+[2025-03-21 08:35:02 : INFO] - Cache for URL: http://localhost:10013/zinedistro/the-hackney-anarchist/ has been purged, triggered by action: save_post 
+[2025-03-21 08:35:02 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "The Hackney Anarchist" has been purged, triggered by action: save_post 
+[2025-03-21 08:35:29 : INFO] - Cache for URL: http://localhost:10013/zinedistro/livor-mortis/ has been purged, triggered by action: save_post 
+[2025-03-21 08:35:29 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "Livor Mortis" has been purged, triggered by action: save_post 
+[2025-03-21 08:35:51 : INFO] - Cache for URL: http://localhost:10013/zinedistro/raising-hell/ has been purged, triggered by action: save_post 
+[2025-03-21 08:35:51 : INFO] - Cache for archive page associated with post_type: zinedistro and Title: "Raising Hell" has been purged, triggered by action: save_post 
+[2025-03-21 08:48:16 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-03-21 09:01:26 : INFO] - Cache for URL: http://localhost:10013/contact/ has been purged, triggered by action: save_post 
+[2025-03-21 09:15:10 : INFO] - Full Cache Purge triggered by: WPO_Page_Cache::handle_purge_single_page_cache 

@@ -14,10 +14,12 @@
     padding-right: 1rem;
     width: 100%;
 }
-.zine-content h2 {
+.zine-content h3 {
     width: 100%;
     text-align: left;
     border-bottom: 1px solid #555;
+    font-family: 'Special Elite';
+    font-size: 1.2rem;
 }
 .zine-content .wp-block-buttons {
     align-self: center;
@@ -42,6 +44,9 @@
 }
 .zine-content {
     padding: 10rem;
+}
+.zine-content h3 {
+    font-size: 1.4rem;
 }
 .zine-quote {
     font-size: 1rem !important;

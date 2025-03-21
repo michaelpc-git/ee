@@ -66,3 +66,23 @@
 [2025-03-16 00:02:25 : INFO] - Pruning the smush log file 
 [2025-03-19 15:48:33 : INFO] - Re_Smush_It_Task with attachment ID : 1026, autocreated on : March 19, 2025 03:48:33 
 [2025-03-19 15:48:59 : INFO] - Re_Smush_It_Task with attachment ID : 1027, autocreated on : March 19, 2025 03:48:59 
+[2025-03-21 09:03:26 : INFO] - Re_Smush_It_Task with attachment ID : 1062, autocreated on : March 21, 2025 09:03:26 
+[2025-03-21 09:03:53 : INFO] - Re_Smush_It_Task with attachment ID : 1063, autocreated on : March 21, 2025 09:03:53 
+[2025-03-21 09:06:15 : INFO] - Re_Smush_It_Task with attachment ID : 1064, autocreated on : March 21, 2025 09:06:14 
+[2025-03-21 09:08:01 : INFO] - Re_Smush_It_Task with attachment ID : 1065, autocreated on : March 21, 2025 09:08:01 
+[2025-03-21 09:11:14 : INFO] - Re_Smush_It_Task with attachment ID : 1066, autocreated on : March 21, 2025 09:11:14 
+[2025-03-21 09:12:26 : INFO] - Re_Smush_It_Task with attachment ID : 1067, autocreated on : March 21, 2025 09:12:26 
+[2025-03-21 09:13:25 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-03-21 09:13:26 : INFO] - Processing task with ID : 810, and type 'smush' 
+[2025-03-21 09:13:26 : INFO] - Re_Smush_It_Task - attachment ID : 1066, started on : March 21, 2025 09:13:26 
+[2025-03-21 09:13:26 : INFO] - File: EE-2025-whitetext.png, Compression quality: 92 
+[2025-03-21 09:13:28 : INFO] - Backing up the original image - 2025/03/EE-2025-whitetext-updraft-pre-smush-original.png 
+[2025-03-21 09:13:32 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/EE-2025-whitetext.png.The file was compressed from 261.42 KB to 119.15 KB, saving 54.42 percent, using WP-Optimize 
+[2025-03-21 09:13:32 : INFO] - Completed processing task with ID : 810, and type 'smush' 
+[2025-03-21 09:13:47 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-03-21 09:13:47 : INFO] - Processing task with ID : 811, and type 'smush' 
+[2025-03-21 09:13:47 : INFO] - Re_Smush_It_Task - attachment ID : 1067, started on : March 21, 2025 09:13:47 
+[2025-03-21 09:13:47 : INFO] - File: cropped-EE-2025-whitetext.png, Compression quality: 92 
+[2025-03-21 09:13:49 : INFO] - Backing up the original image - 2025/03/cropped-EE-2025-whitetext-updraft-pre-smush-original.png 
+[2025-03-21 09:13:53 : INFO] - Successfully optimized the image - /home/com1os/Local Sites/eroding-empire-2025/app/public/wp-content/uploads/2025/03/cropped-EE-2025-whitetext.png.The file was compressed from 69.80 KB to 46.42 KB, saving 33.5 percent, using WP-Optimize 
+[2025-03-21 09:13:53 : INFO] - Completed processing task with ID : 811, and type 'smush' 
