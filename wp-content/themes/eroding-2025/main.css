@@ -1,7 +1,7 @@
 /*GENERAL SETUP*/
 /*COLOURS*/
 :root {
-    --primary-accent: #8b54f0;
+    --primary-accent: #9D6FF3;
     --secondary-accent: #cf2e2e;
 }
 
@@ -59,7 +59,8 @@ z-index: 9998;
 height: 75px;
 width: 100%;
 border-right: none;
-border-top: 2px solid var(--primary-accent) box-shadow: 0 0 10px white;
+border-top: 2px solid var(--primary-accent);
+box-shadow: 0 0 10px white;
 clip-path: inset(-10px 0px 0px 0px);
 }
 .footer-nav {
