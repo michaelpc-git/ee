@@ -1,0 +1,47 @@
+[2025-03-20 20:29:09.143073] [INFO] Starting migration loop - With allotted time: 26.926184892654 seconds
+[2025-03-20 20:29:09.147468] [INFO] Initating with remote and local host with remaining time:26.921785831451
+[2025-03-20 20:29:09.153732] [DEBUG] Calling initate service for destination: local
+[2025-03-20 20:29:09.700594] [DEBUG] Got initiate token: a5f30aeb8292ab6f0c086a8c823cd2fceefbccc285bb0091971ecc145a25f0df
+[2025-03-20 20:29:09.700680] [DEBUG] Calling initate service for destination: remote
+[2025-03-20 20:29:10.135108] [CRITICAL] Failed initializing - Got error response from remote initiate service -  Response: 
+
+Array
+(
+    [0] =&gt; Could not connect to nogodsnojedi.xyz service (HTTP statuscode: 500)
+)
+
+[2025-03-20 20:29:10.135223] [CRITICAL] Failed initializing - Could not get a valid token from remote server
+[2025-03-20 20:29:10.135250] [INFO] Initation completed on: 0.99019312858582 seconds
+[2025-03-20 20:29:10.145519] [INFO] Ending migration loop - with remaining time: 25.92370390892
+[2025-03-20 20:29:18.774941] [INFO] User restarted the migration
+[2025-03-20 20:29:18.785954] [INFO] Starting migration loop - With allotted time: 26.948408126831 seconds
+[2025-03-20 20:29:18.787191] [INFO] Initating with remote and local host with remaining time:26.947162151337
+[2025-03-20 20:29:18.796352] [DEBUG] Calling initate service for destination: local
+[2025-03-20 20:29:18.848859] [DEBUG] Got initiate token: 8fe6323b71299e53845b066527cf6e7a57f15e3061f42c32b66150885dc0cc8a
+[2025-03-20 20:29:18.848916] [DEBUG] Calling initate service for destination: remote
+[2025-03-20 20:29:19.293660] [CRITICAL] Failed initializing - Got error response from remote initiate service -  Response: 
+
+Array
+(
+    [0] =&gt; Could not connect to nogodsnojedi.xyz service (HTTP statuscode: 500)
+)
+
+[2025-03-20 20:29:19.294013] [CRITICAL] Failed initializing - Could not get a valid token from remote server
+[2025-03-20 20:29:19.294143] [INFO] Initation completed on: 0.5078330039978 seconds
+[2025-03-20 20:29:19.312153] [INFO] Ending migration loop - with remaining time: 26.422206163406
+[2025-03-20 23:07:46.039077] [INFO] User restarted the migration
+[2025-03-20 23:07:46.054136] [INFO] Starting migration loop - With allotted time: 26.882528781891 seconds
+[2025-03-20 23:07:46.056295] [INFO] Initating with remote and local host with remaining time:26.880364894867
+[2025-03-20 23:07:46.064135] [DEBUG] Calling initate service for destination: local
+[2025-03-20 23:07:46.149839] [DEBUG] Got initiate token: 89e3e4923526fb696fe8d8cc9f6c4530f0c790a107269ea37f4a7f5a9ab3eac4
+[2025-03-20 23:07:46.149947] [DEBUG] Calling initate service for destination: remote
+[2025-03-20 23:07:46.778943] [CRITICAL] Failed initializing - Got error response from remote initiate service -  Response: 
+
+Array
+(
+    [0] =&gt; Could not connect to nogodsnojedi.xyz service (HTTP statuscode: 500)
+)
+
+[2025-03-20 23:07:46.779282] [CRITICAL] Failed initializing - Could not get a valid token from remote server
+[2025-03-20 23:07:46.779378] [INFO] Initation completed on: 0.72382807731628 seconds
+[2025-03-20 23:07:46.805657] [INFO] Ending migration loop - with remaining time: 26.131019830704
