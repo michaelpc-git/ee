@@ -527,3 +527,4 @@
 [2025-03-21 14:59:58 : INFO] - Cache for URL: http://localhost:10013/more/ has been purged, triggered by action: save_post 
 [2025-03-21 15:55:12 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 
 [2025-03-21 23:49:02 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-21 23:51:18 : INFO] - Cache for URL: http://localhost:10013/calendar/ has been purged, triggered by action: save_post 

@@ -1,14 +1,11 @@
 /*Calendar*/
-td {
-	font-size: 90%!important;
-}
-.day {
-	color: #333;
+main {
+	padding: 0;
 }
 
 .ics-calendar-arrow-nav {
-	line-height: 0;
 	font-size: 1.2rem;
+	line-height: 1;
 }
 .ics-calendar-arrow-nav > .prev {
 	color: var(--primary-accent) !important;
@@ -25,7 +22,22 @@ td {
 
 .ics-calendar-month-wrapper h3 {
 	font-size: 1.2rem;
+	line-height: 2;
 }
+
+.ics-calendar-select {
+	float: right !important;
+	margin: .5em 0 .5em .5em !important;
+}
+
+
+td {
+	font-size: 90%!important;
+}
+.day {
+	color: #333;
+}
+
 
 .r34ics_lightbox .r34ics_lightbox_inner {
 	width: 100% !important;
