@@ -32,6 +32,30 @@ add_action('wp_head' , function(){
 <link rel="preload" href="/wp-content/uploads/fonts/SpecialElite_Regular.ttf" as="font" type="font/ttf" crossorgin="anonymous">';
 });
 
+//SCRIPTS
+function socialcentres_js() {
+    ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            alert('Alert!');
+            jQuery('a.locations-menu').click(function(){
+                jQuery(".locations-sc").toggleClass("first-menu-item");
+                jQuery(".locations-sq").toggleClass("second-menu-item");
+                jQuery(".more-zd").removeClass("first-menu-item");
+                jQuery(".more-ar").removeClass("second-menu-item");
+            });
+            jQuery('a.more-menu').click(function(){
+                jQuery(".more-zd").toggleClass("first-menu-item");
+                jQuery(".more-ar").toggleClass("second-menu-item");
+                jQuery(".locations-sc").removeClass("first-menu-item");
+                jQuery(".locations-sq").removeClass("second-menu-item");
+            })
+        });
+    </script>
+    <?php
+}
+add_action('wp_head', 'socialcentres_js');
 
 // STYLESHEETS
 if ( !function_exists( 'main_css' ) ):

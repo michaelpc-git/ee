@@ -113,7 +113,7 @@ transform: scaleX(1.1);
 /*Mobile pop-up menus*/
 @media only screen and (max-width: 767px){
 .footer-nav .desktop-only {
-/*display: none !important;*/
+visibility: hidden;
 position: absolute;
 display: flex;
 align-items: center;
@@ -124,31 +124,39 @@ width: 18.18% !important;
 box-shadow: 0 -4px 10px -3px white;
 }
 .footer-nav a:nth-of-type(5) {
-    right: 17.5%;
-    bottom: 72px;
+    right: 18.18%;
     border-left: 2px solid var(--primary-accent);
     border-right: 2px solid var(--primary-accent);
 }
 .footer-nav a:nth-of-type(6) {
-    right: 17.5%;
-    bottom: 144px;
+    right: 18.18%;
     border-left: 2px solid var(--primary-accent);
     border-right: 2px solid var(--primary-accent);
     border-top: 2px solid var(--primary-accent);
 }
 .footer-nav a:nth-of-type(8) {
-    right: 0px;
-    bottom: 72px;
+    right: 0.25rem;
     border-left: 2px solid var(--primary-accent);
-    display:none;
+    border-right: 2px solid var(--primary-accent);
 }
 .footer-nav a:nth-of-type(9) {
-    right: 0px;
-    bottom: 144px;
+    right: 0.25rem;
     border-left: 2px solid var(--primary-accent);
+    border-right: 2px solid var(--primary-accent);
     border-top: 2px solid var(--primary-accent);
-    display:none;
 }
+/*Create the classes and transitions for the script*/
+.first-menu-item {
+    visibility: visible !important;
+    transform: translateY(-74px);
+    transition: 300ms ease-in-out;
+}
+.second-menu-item {
+    visibility: visible !important;
+    transform: translateY(-148px);
+    transition: 300ms ease-in-out;
+}
+
 }
 
 /*Pill buttons*/
@@ -169,6 +177,8 @@ box-shadow: 0 -4px 10px -3px white;
 @media only screen and (max-width:1024px){
 #gt_float_wrapper {
     bottom: 90px !important;
+    left: 20px !important;
+    right: unset !important;
 }
 .gt_float_switcher {
 	font-size: 1em !important;
