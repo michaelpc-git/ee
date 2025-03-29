@@ -33,12 +33,11 @@ add_action('wp_head' , function(){
 });
 
 //SCRIPTS
-function socialcentres_js() {
+function popup_js() {
     ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
-            alert('Alert!');
             jQuery('a.locations-menu').click(function(){
                 jQuery(".locations-sc").toggleClass("first-menu-item");
                 jQuery(".locations-sq").toggleClass("second-menu-item");
