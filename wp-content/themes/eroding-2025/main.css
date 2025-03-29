@@ -54,23 +54,26 @@ main h2 {
 
 footer {
 position: fixed;
-bottom: -1px;
+bottom: 0px;
 z-index: 9998;
-height: 75px;
+height: 225px;
 width: 100%;
 border-right: none;
-border-top: 2px solid var(--primary-accent);
-box-shadow: 0 0 10px white;
+
 clip-path: inset(-10px 0px 0px 0px);
 }
 .footer-nav {
 flex-direction: row !important;
-height: 100%;
+position: absolute;
+bottom: 0px;
+height: 75px;
 width: 100%;
 margin-top: 0px;
 gap: 0 !important;
 padding-left: 0.5rem;
 padding-right: 0.5rem;
+border-top: 2px solid var(--primary-accent);
+box-shadow: 0 0 10px white;
 }
 .footer-nav .wp-block-tiptip-hyperlink-group-block {
 width: 100% !important;
@@ -106,9 +109,37 @@ flex-grow: 1;
 margin-top: 5px;
 transform: scaleX(1.1);
 }
-.desktop-only {
-display: none !important;
+
+/*Mobile pop-up menus*/
+.footer-nav .desktop-only {
+/*display: none !important;*/
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #000;
+height: 75px;
+width: 20% !important;
 }
+.locations-menu {
+    right: 17.5%;
+}
+.locations-menu .lm-sc {
+    bottom: 74px;
+}
+.locations-menu .lm-s {
+    bottom: 148px;
+}
+.more-menu {
+    right: 0px;
+}
+.more-menu .mm-zd {
+    bottom: 74px;
+}
+.more-menu .mm-a {
+    bottom: 148px;
+}
+
 
 /*Pill buttons*/
 .wp-block-button a {
