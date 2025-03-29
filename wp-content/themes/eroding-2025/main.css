@@ -111,6 +111,7 @@ transform: scaleX(1.1);
 }
 
 /*Mobile pop-up menus*/
+@media only screen and (max-width: 767px){
 .footer-nav .desktop-only {
 /*display: none !important;*/
 position: absolute;
@@ -119,27 +120,36 @@ align-items: center;
 justify-content: center;
 background-color: #000;
 height: 75px;
-width: 20% !important;
+width: 18.18% !important;
+box-shadow: 0 -4px 10px -3px white;
 }
-.locations-menu {
+.footer-nav a:nth-of-type(5) {
     right: 17.5%;
+    bottom: 72px;
+    border-left: 2px solid var(--primary-accent);
+    border-right: 2px solid var(--primary-accent);
 }
-.locations-menu .lm-sc {
-    bottom: 74px;
+.footer-nav a:nth-of-type(6) {
+    right: 17.5%;
+    bottom: 144px;
+    border-left: 2px solid var(--primary-accent);
+    border-right: 2px solid var(--primary-accent);
+    border-top: 2px solid var(--primary-accent);
 }
-.locations-menu .lm-s {
-    bottom: 148px;
-}
-.more-menu {
+.footer-nav a:nth-of-type(8) {
     right: 0px;
+    bottom: 72px;
+    border-left: 2px solid var(--primary-accent);
+    display:none;
 }
-.more-menu .mm-zd {
-    bottom: 74px;
+.footer-nav a:nth-of-type(9) {
+    right: 0px;
+    bottom: 144px;
+    border-left: 2px solid var(--primary-accent);
+    border-top: 2px solid var(--primary-accent);
+    display:none;
 }
-.more-menu .mm-a {
-    bottom: 148px;
 }
-
 
 /*Pill buttons*/
 .wp-block-button a {
