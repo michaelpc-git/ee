@@ -54,7 +54,7 @@ function popup_js() {
     </script>
     <?php
 }
-add_action('wp_head', 'socialcentres_js');
+add_action('wp_head', 'popup_js');
 
 // STYLESHEETS
 if ( !function_exists( 'main_css' ) ):
