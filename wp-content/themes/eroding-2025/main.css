@@ -133,6 +133,8 @@ box-shadow: 0 -4px 10px -3px white;
     border-left: 2px solid var(--primary-accent);
     border-right: 2px solid var(--primary-accent);
     border-top: 2px solid var(--primary-accent);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .footer-nav a:nth-of-type(8) {
     right: 0.25rem;
@@ -144,6 +146,11 @@ box-shadow: 0 -4px 10px -3px white;
     border-left: 2px solid var(--primary-accent);
     border-right: 2px solid var(--primary-accent);
     border-top: 2px solid var(--primary-accent);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.desktop-only h3 {
+    padding: 0 5px;
 }
 /*Create the classes and transitions for the script*/
 .first-menu-item {
