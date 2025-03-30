@@ -56,6 +56,20 @@ function popup_js() {
 }
 add_action('wp_head', 'popup_js');
 
+function radar_js() {
+    ?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('#whatthefuckisradar').click(function(){
+                jQuery(".radar-column").toggleClass("radar-show");
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_head', 'radar_js');
+
 // STYLESHEETS
 if ( !function_exists( 'main_css' ) ):
     function main_css() {

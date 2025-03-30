@@ -548,3 +548,8 @@
 [2025-03-29 07:00:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
 [2025-03-29 07:00:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
 [2025-03-29 07:05:05 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-03-30 09:24:21 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 
+[2025-03-30 09:27:05 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 
+[2025-03-30 09:36:06 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 
+[2025-03-30 09:36:29 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 
+[2025-03-30 09:49:01 : INFO] - Cache for URL: http://localhost:10013/ has been purged, triggered by action: save_post 

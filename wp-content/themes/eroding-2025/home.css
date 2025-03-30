@@ -5,6 +5,31 @@ justify-content: space-between;
 }
 }
 
+.radar-column {
+	border: 5px solid transparent;
+    border-image-width: 1.5 !important;
+    border-image-outset: 5px !important;
+    border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
+    background-color: #fff;
+    color: #151515;
+	padding: 0 1rem 1rem 1rem;
+	display: none !important;
+	transform: translateY(-100%);
+	opacity: 0;
+}
+.radar-column h3 {
+    padding: 0;
+    font-family: 'Special Elite';
+    font-size: 1.3rem;
+}
+.radar-show {
+	display: flex !important;
+	opacity: 1;
+	animation: slide-in 0.5s forwards;
+}
+@keyframes slide-in {
+    100% { transform: translateY(0%); }
+}
 
 /*SQUAT RADAR WIDGET*/
 
