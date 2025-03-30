@@ -26,10 +26,10 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 92233720368547
 
 // PRELOAD FONTS
 add_action('wp_head' , function(){
-    echo'<link rel="preload" href="/wp-content/uploads/fonts/ERODED-PERSONAL-USE.ttf" as="font" type="font/ttf" crossorgin="anonymous">
-<link rel="preload" href="/wp-content/uploads/fonts/Poppins_Regular.ttf" as="font" type="font/ttf" crossorgin="anonymous">
-<link rel="preload" href="/wp-content/uploads/fonts/Punktype.ttf" as="font" type="font/ttf" crossorgin="anonymous">
-<link rel="preload" href="/wp-content/uploads/fonts/SpecialElite_Regular.ttf" as="font" type="font/ttf" crossorgin="anonymous">';
+    echo'<link rel="preload" href="/wp-content/uploads/fonts/ERODED-PERSONAL-USE.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="/wp-content/uploads/fonts/Poppins_Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="/wp-content/uploads/fonts/Punktype.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="/wp-content/uploads/fonts/SpecialElite_Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">';
 });
 
 //SCRIPTS
@@ -49,7 +49,7 @@ function popup_js() {
                 jQuery(".more-ar").toggleClass("second-menu-item");
                 jQuery(".locations-sc").removeClass("first-menu-item");
                 jQuery(".locations-sq").removeClass("second-menu-item");
-            })
+            });
         });
     </script>
     <?php
