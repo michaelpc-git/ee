@@ -3,6 +3,7 @@ main {
 	padding: 0;
 }
 
+/*Navigation*/
 .ics-calendar-arrow-nav {
 	font-size: 1.2rem;
 	line-height: 1;
@@ -23,6 +24,7 @@ main {
 .ics-calendar-month-wrapper h3 {
 	font-size: 1.2rem;
 	line-height: 2;
+	font-weight: 600;
 }
 
 .ics-calendar-select {
@@ -30,15 +32,55 @@ main {
 	margin: .5em 0 .5em .5em !important;
 }
 
-
+/*Calendar Styling*/
 td {
-	font-size: 90%!important;
+	font-size: 100%!important;
 }
 .day {
 	color: #333;
 }
+thead {
+	border: 1px solid var(--primary-accent);
+}
+.ics-calendar-month-grid th {
+	background-color: var(--primary-accent) !important;
+	font-size: inherit !important;
+	border: none !important;
+	color: white !important;
+}
 
+.ics-calendar-month-grid td {
+	background-color: #141414;
+	border: 1px solid #333 !important;
+}
+.ics-calendar-month-grid .off {
+	background-color: #141414 !important;
+}
+.ics-calendar-month-grid ul.events li {
+	background-color: black;
+	color: white;
+	font-weight: 600;
+	border-bottom: 1px solid #333 !important;
+	text-shadow: 0 0 1px white;
+	box-shadow: inset 0 0 10px 1px var(--primary-accent);
+	border-radius: 10px;
+	margin: 2px !important;
+	border-left: 4px solid var(--primary-accent);
+	transition: 300ms ease-in-out !important;
+}
 
+.ics-calendar-month-grid ul.events li:hover {
+	background-color: #f4c9c9;
+	border-left: 4px solid var(--secondary-accent);
+	box-shadow: inset 0 0 10px 1px var(--secondary-accent);
+	transition: 300ms ease-in-out !important;
+	color: black;
+}
+.ics-calendar-month-grid .today .day {
+	background-color: var(--secondary-accent) !important;
+}
+
+/*Lightbox*/
 .r34ics_lightbox .r34ics_lightbox_inner {
 	width: 100% !important;
 	max-height: 800px !important;
@@ -49,19 +91,8 @@ td {
     border-image-outset: 5px !important;
     border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
 }
-
 .r34ics_lightbox .eventdesc {
 	margin-top: 1em;
-}
-.ics-calendar .event {
-	background-color: #efe6ff;
-	border-left: 4px solid var(--primary-accent);
-	border-bottom: 1px solid #e2d2ff !important;
-}
-.ics-calendar .event:hover {
-	background-color: #f4c9c9;
-	border-left: 4px solid var(--secondary-accent);
-	transition: 300ms ease-in-out !important;
 }
 .r34ics_lightbox_close {
     line-height: 44px !important;
@@ -99,7 +130,7 @@ td {
 	margin: 2em 0 1em 0 !important;
 }
 
- /*calendar desktop stuff*/
+ /*DESKTOP STYLING*/
 @media only screen and (min-width: 1280px) {
     .ics-calendar-month-grid td {
         height: 4rem !important;
