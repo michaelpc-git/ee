@@ -77,6 +77,9 @@
 .forminator-ui .forminator-icon-calendar::before {
     font-size: 1.6rem;
 }
+.forminator-ui.forminator-custom-form[data-design="flat"] .forminator-button {
+    width: unset;
+}
 
 .radar-column {
      border: 5px solid transparent;
