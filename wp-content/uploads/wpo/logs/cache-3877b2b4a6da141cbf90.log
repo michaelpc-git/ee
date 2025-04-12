@@ -609,3 +609,7 @@
 [2025-04-12 04:13:17 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-04-12 04:13:35 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-04-12 04:13:45 : INFO] - Full Cache Purge triggered by: WPO_Page_Cache::handle_purge_single_page_cache 
+[2025-04-12 14:51:50 : INFO] - Cache for URL: http://localhost:10013/?p=1214 has been purged, triggered by action: save_post 
+[2025-04-12 14:51:50 : INFO] - Cache for all archives page associated with post_type: post and Title: "Auto Draft" have been purged, triggered by action: save_post 
+[2025-04-12 14:52:59 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 14:53:03 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
