@@ -1,15 +1,21 @@
 /*MOBILE-FIRST STYLING*/
 .forminator-custom-form-713 {
-    width: 80% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
 }
 .forminator-custom-form-713 .forminator-input {
     font-size: 1rem !important;
+}
+.forminator-ui.forminator-custom-form[data-grid=open] .forminator-row:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 /*DESKTOP STYLING*/
 @media only screen and (min-width: 1024px){
 .forminator-custom-form-713 {
-    width: 50% !important;
     max-width: 1080px !important;
+}
+.forminator-ui.forminator-custom-form:not(.forminator-size--small)[data-grid="open"] .forminator-row:not(:last-child) {
+    margin-bottom: 10px !important;
 }
 }
