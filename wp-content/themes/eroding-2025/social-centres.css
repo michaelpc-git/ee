@@ -18,6 +18,7 @@
     width: 70px !important;
     max-width: 70px !important;
     object-fit: cover !important;
+    filter: drop-shadow(0 10px 5px black);
 }
 .location-header h2 {
     padding-top: 5px;

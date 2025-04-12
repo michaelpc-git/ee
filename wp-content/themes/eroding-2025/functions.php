@@ -35,7 +35,6 @@ add_action('wp_head' , function(){
 //SCRIPTS
 function popup_js() {
     ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             jQuery('a.locations-menu').click(function(){
@@ -57,8 +56,8 @@ function popup_js() {
 add_action('wp_head', 'popup_js');
 
 function radar_js() {
+    if (is_page( 'eroding-empire' ) ):
     ?>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             jQuery('#whatthefuckisradar').click(function(){
@@ -67,6 +66,7 @@ function radar_js() {
         });
     </script>
     <?php
+    endif;
 }
 add_action('wp_head', 'radar_js');
 

@@ -147,6 +147,10 @@ class EventForm {
 				wp_redirect( $_POST['_wp_http_referer'] . '?form_success=true' ); // redirect back to your contact form
 			} catch ( RequestException $e ) {
 			}
+			$to = 'admin@eroding.org.uk';
+			$subject = 'A new event has been submitted';
+			$message = 'Someone has submitted an event. Please log in to radar.squat.net to confirm or reject this submission.';
+			wp_mail( $to, $subject, $message);
 		}
 	}
 

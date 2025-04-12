@@ -589,3 +589,23 @@
 [2025-04-12 00:41:55 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-04-12 00:45:24 : INFO] - Cache for URL: http://localhost:10013/archives/website/ has been purged, triggered by action: save_post 
 [2025-04-12 01:28:11 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 01:58:52 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 02:01:18 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 02:04:39 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 02:12:51 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 02:56:31 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 02:56:38 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 02:59:31 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 03:00:56 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:08:38 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:08:46 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:14:24 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 03:36:35 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:36:47 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:37:03 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:37:15 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 03:37:48 : INFO] - Cache for URL: http://localhost:10013/submit/ has been purged, triggered by action: save_post 
+[2025-04-12 03:46:37 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 04:13:17 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 04:13:35 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
+[2025-04-12 04:13:45 : INFO] - Full Cache Purge triggered by: WPO_Page_Cache::handle_purge_single_page_cache 

@@ -1,18 +1,17 @@
 <?php
 /**
- * Advanced Custom Fields PRO
+ * Advanced Custom Fields
  *
  * @package       ACF
  * @author        WP Engine
  *
  * @wordpress-plugin
- * Plugin Name:       Advanced Custom Fields PRO
+ * Plugin Name:       Advanced Custom Fields
  * Plugin URI:        https://www.advancedcustomfields.com
  * Description:       Customize WordPress with powerful, professional and intuitive fields.
- * Version:           6.3.11
+ * Version:           6.4.0.1
  * Author:            WP Engine
  * Author URI:        https://wpengine.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields
- * Update URI:        false
  * Text Domain:       acf
  * Domain Path:       /lang
  * Requires PHP:      7.4
@@ -22,28 +21,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
-//nulled raz0r
-$lic_data = base64_encode(
-    maybe_serialize(
-        array(
-            'key' => '********',
-            'url' => home_url(),
-        )
-    )
-);
-update_option('acf_pro_license', $lic_data);
-update_option('acf_pro_license_status', array('status' => 'active', 'next_check' => time() * 9));
-add_action('init', function () {
-    add_filter('pre_http_request', function ($pre, $url, $request_args) {
-        if (is_string($url) && strpos($url, 'https://connect.advancedcustomfields.com/') !== false) {
-            return array('response' => array('code' => 200, 'message' => 'OK'));
-        }
-        return $pre;
-    }, 10, 3);
-});
-delete_site_transient( 'update_plugins' );
-delete_transient( 'acf_plugin_updates' );
 
 if ( ! class_exists( 'ACF' ) ) {
 
@@ -58,7 +35,7 @@ if ( ! class_exists( 'ACF' ) ) {
 		 *
 		 * @var string
 		 */
-		public $version = '6.3.11';
+		public $version = '6.4.0.1';
 
 		/**
 		 * The plugin settings array.
@@ -113,7 +90,7 @@ if ( ! class_exists( 'ACF' ) ) {
 
 			// Define settings.
 			$this->settings = array(
-				'name'                    => __( 'Advanced Custom Fields', 'acf' ),
+				'name'                    => 'Advanced Custom Fields',
 				'slug'                    => dirname( ACF_BASENAME ),
 				'version'                 => ACF_VERSION,
 				'basename'                => ACF_BASENAME,
@@ -155,6 +132,9 @@ if ( ! class_exists( 'ACF' ) ) {
 				'enable_meta_box_cb_edit' => true,
 			);
 
+			// Include autoloader.
+			include_once __DIR__ . '/vendor/autoload.php';
+
 			// Include utility functions.
 			include_once ACF_PATH . 'includes/acf-utility-functions.php';
 
@@ -166,13 +146,21 @@ if ( ! class_exists( 'ACF' ) ) {
 			// Include classes.
 			acf_include( 'includes/class-acf-data.php' );
 			acf_include( 'includes/class-acf-internal-post-type.php' );
-			acf_include( 'includes/class-acf-site-health.php' );
 			acf_include( 'includes/fields/class-acf-field.php' );
 			acf_include( 'includes/locations/abstract-acf-legacy-location.php' );
 			acf_include( 'includes/locations/abstract-acf-location.php' );
 
+			// Initialise autoloaded classes.
+			new ACF\Site_Health\Site_Health();
+
 			// Include functions.
 			acf_include( 'includes/acf-helper-functions.php' );
+
+			acf_new_instance( 'ACF\Meta\Comment' );
+			acf_new_instance( 'ACF\Meta\Post' );
+			acf_new_instance( 'ACF\Meta\Term' );
+			acf_new_instance( 'ACF\Meta\User' );
+
 			acf_include( 'includes/acf-hook-functions.php' );
 			acf_include( 'includes/acf-field-functions.php' );
 			acf_include( 'includes/acf-bidirectional-functions.php' );
@@ -250,11 +238,13 @@ if ( ! class_exists( 'ACF' ) ) {
 			// Include legacy.
 			acf_include( 'includes/legacy/legacy-locations.php' );
 
-			// Include updater.
-			acf_include( 'includes/Updater/Updater.php' );
+			// Include updater if included with this build.
+			acf_include( 'includes/Updater/init.php' );
 
-			// Include PRO.
-			acf_include( 'pro/acf-pro.php' );
+			// Include PRO if included with this build.
+			if ( ! defined( 'ACF_PREVENT_PRO_LOAD' ) || ( defined( 'ACF_PREVENT_PRO_LOAD' ) && ! ACF_PREVENT_PRO_LOAD ) ) {
+				acf_include( 'pro/acf-pro.php' );
+			}
 
 			if ( is_admin() && function_exists( 'acf_is_pro' ) && ! acf_is_pro() ) {
 				acf_include( 'includes/admin/admin-options-pages-preview.php' );
@@ -294,6 +284,9 @@ if ( ! class_exists( 'ACF' ) ) {
 
 			// Load textdomain file.
 			acf_load_textdomain();
+
+			// Make plugin name translatable.
+			acf_update_setting( 'name', __( 'Advanced Custom Fields', 'acf' ) );
 
 			// Include 3rd party compatiblity.
 			acf_include( 'includes/third-party.php' );
@@ -417,22 +410,9 @@ if ( ! class_exists( 'ACF' ) ) {
 			 */
 			do_action( 'acf/include_taxonomies', ACF_MAJOR_VERSION );
 
-			// If we're on 6.5 or newer, load block bindings. This will move to an autoloader in 6.4.
-			if ( version_compare( get_bloginfo( 'version' ), '6.5-beta1', '>=' ) ) {
-				acf_include( 'includes/Blocks/Bindings.php' );
+			// If we're on 6.5 or newer, load block bindings.
+			if ( version_compare( get_bloginfo( 'version' ), '6.5', '>=' ) ) {
 				new ACF\Blocks\Bindings();
-			}
-
-			// If we're ACF free, register the updater.
-			if ( function_exists( 'acf_is_pro' ) && ! acf_is_pro() ) {
-				acf_register_plugin_update(
-					array(
-						'id'       => 'acf',
-						'slug'     => acf_get_setting( 'slug' ),
-						'basename' => acf_get_setting( 'basename' ),
-						'version'  => acf_get_setting( 'version' ),
-					)
-				);
 			}
 
 			/**
@@ -819,42 +799,6 @@ if ( ! class_exists( 'ACF' ) ) {
 				do_action( 'acf/activated_pro' );
 			}
 		}
-	}
-
-	if ( ! class_exists( 'ACF_Updates' ) ) {
-		/**
-		 * The main function responsible for returning the acf_updates singleton.
-		 * Use this function like you would a global variable, except without needing to declare the global.
-		 *
-		 * Example: <?php $acf_updates = acf_updates(); ?>
-		 *
-		 * @since   5.5.12
-		 *
-		 * @return ACF\Updater The singleton instance of Updater.
-		 */
-		function acf_updates() {
-			global $acf_updates;
-			if ( ! isset( $acf_updates ) ) {
-				$acf_updates = new ACF\Updater();
-			}
-			return $acf_updates;
-		}
-
-		/**
-		 * Alias of acf_updates()->add_plugin().
-		 *
-		 * @since   5.5.10
-		 *
-		 * @param   array $plugin Plugin data array.
-		 */
-		function acf_register_plugin_update( $plugin ) {
-			acf_updates()->add_plugin( $plugin );
-		}
-
-		/**
-		 * Register a dummy ACF_Updates class for back compat.
-		 */
-		class ACF_Updates {} //phpcs:ignore -- Back compat.
 	}
 
 	/**
