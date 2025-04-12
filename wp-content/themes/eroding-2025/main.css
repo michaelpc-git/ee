@@ -56,11 +56,9 @@ footer {
 position: fixed;
 bottom: 0px;
 z-index: 9998;
-height: 225px;
+height: 75px;
 width: 100%;
 border-right: none;
-
-clip-path: inset(-10px 0px 0px 0px);
 }
 .footer-nav {
 flex-direction: row !important;
