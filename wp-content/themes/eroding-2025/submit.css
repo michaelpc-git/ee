@@ -99,13 +99,12 @@
 .forminator-ui .forminator-icon-calendar::before {
     font-size: 1.6rem;
 }
-.forminator-ui.forminator-custom-form[data-design="flat"] .forminator-button {
-    width: unset;
+
+button#forminator-field-upload-1_67fad6cc8dace_button {
+    width: 50%;
+    margin-right: 1rem;
 }
 
-.forminator-button-submit {
-    width: 150px !important;
-}
 
 .radar-column {
      border: 5px solid transparent;
