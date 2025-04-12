@@ -60,6 +60,7 @@ if (!class_exists('R34ICS')) {
 			'arrayonly' => false,
 			'attach' => '',
 			'basicauth' => false,
+			'category' => '',
 			'color' => '',
 			'columnlabels' => '',
 			'combinemultiday' => false,
@@ -157,7 +158,7 @@ if (!class_exists('R34ICS')) {
 			'title' => false,
 		);
 		
-		protected $shortcode_feed_array_params = array('color', 'feedlabel', 'url');
+		protected $shortcode_feed_array_params = array('category', 'color', 'feedlabel', 'url');
 		protected $shortcode_dynamic_values = array('guid', 'startdate');
 		
 		protected $views = array('basic', 'list', 'month', 'week');
@@ -528,7 +529,7 @@ if (!class_exists('R34ICS')) {
 				// Set exact display date range, per view
 				switch ($view) {
 					case 'week':
-						if (($limitdays >= 1 && $limitdays <= 7) || !empty($startdate)) {
+						if (($limitdays > 0 && $limitdays <= 8) || !empty($startdate)) {
 							if (!empty($startdate) && intval($startdate) > 20000000) {
 								$first_date = $startdate;
 							}
@@ -673,8 +674,8 @@ if (!class_exists('R34ICS')) {
 							
 							// Set timezone(s) for event
 							if (!empty($args['eventlocaltime']) || strpos('T', $args['timeformat']) !== false) {
-								$event_start_tz = (!empty($event->dtstart_array[0]['TZID']) ? timezone_open($event->dtstart_array[0]['TZID']) : $url_tz);
-								$event_end_tz = (!empty($event->dtend_array[0]['TZID']) ? timezone_open($event->dtend_array[0]['TZID']) : $url_tz);
+								$event_start_tz = (!empty($event->dtstart_array[0]['TZID']) ? @timezone_open($event->dtstart_array[0]['TZID']) : $url_tz);
+								$event_end_tz = (!empty($event->dtend_array[0]['TZID']) ? @timezone_open($event->dtend_array[0]['TZID']) : $url_tz);
 							}
 							else {
 								$event_start_tz = $event_end_tz = $url_tz;
@@ -853,7 +854,7 @@ if (!class_exists('R34ICS')) {
 						}
 						
 						// Get the date's events in order
-						$events = $this->_date_events_sort($events);
+						$events = $this->_date_events_sort($events, $view);
 						
 						// Insert the date's events into the year/month/day hierarchical array
 						$year = substr($date,0,4);
@@ -970,6 +971,7 @@ if (!class_exists('R34ICS')) {
 			// Set colors and feed titles for color key
 			$ics_data['colors'] = apply_filters('r34ics_display_calendar_color_set', (!empty($args['color']) ? r34ics_color_set(r34ics_space_pipe_explode($args['color']), 1, (empty($args['whitetext']) && empty($args['solidcolors']))) : ''), $args);
 			$ics_data['tablebg'] = $args['tablebg'] ?? '';
+			// @todo Add category support
 			$ics_data['feed_titles'] = !empty($args['feedlabel']) ? explode('|', $args['feedlabel']) : array();
 			
 			// Allow external modification of data array
@@ -1221,12 +1223,10 @@ if (!class_exists('R34ICS')) {
 					$date_format = r34ics_date_format($args['format'], true);
 					echo '<div class="date_in_hover_block">';
 					if (!empty($event['multiday'])) {
-						$md_start = r34ics_date($date_format, strtotime($event['multiday']['start_date']));
-						$md_end = r34ics_date($date_format, strtotime($event['multiday']['end_date']));
-						$day_label = $md_start . ' &#8211; ' . $md_end;
+						$day_label = r34ics_multiday_date_label($date_format, $event, $args);
 					}
 					else {
-						$day_label = r34ics_date($date_format, strtotime($event['dtstart_date']));
+						$day_label = r34ics_date($date_format, $event['dtstart_date'], $event['tz_start']);
 					}
 					echo wp_kses_post($day_label ?: '');
 					echo '</div>';
@@ -1489,6 +1489,7 @@ if (!class_exists('R34ICS')) {
 			if (!empty($args['hidetimes'])) { $ics_calendar_classes[] = 'hide_times'; }
 			if (!empty($args['monthnav'])) { $ics_calendar_classes[] = 'monthnav-' . esc_attr($args['monthnav']); }
 			if (!empty($args['nomobile'])) { $ics_calendar_classes[] = 'nomobile'; }
+			if (!empty($args['reverse'])) { $ics_calendar_classes[] = 'reverse'; }
 			if ($args['sametab'] == 'all') { $ics_calendar_classes[] = 'sametab'; }
 			elseif ($args['sametab'] == 'none') { $ics_calendar_classes[] = 'newtab'; }
 			if (!empty($args['solidcolors'])) { $ics_calendar_classes[] = 'solidcolors'; }
@@ -1568,6 +1569,26 @@ if (!class_exists('R34ICS')) {
 			if (!empty($event->additionalProperties['x_microsoft_cdo_busystatus'])) {
 				$event->status = $event->additionalProperties['x_microsoft_cdo_busystatus'];
 			}
+			
+			// Are we filtering the feed by category?
+			if (!empty($args['category'])) {
+				if (empty($event->categories)) { $exclude = true; }
+				else {
+					// Prepare category argument array for case-insensitive comparison
+					$categories = array_map('r34ics_comparison_string', (array)(explode('|', $args['category'])));
+					// Prepare the event's categories for case-insensitive comparison
+					$event_categories = array_map('r34ics_comparison_string', (array)(explode(',', $event->categories)));
+					// Check for a match
+					$match = false;
+					foreach ((array)$categories as $category) {
+						if (in_array($category, (array)$event_categories)) {
+							$match = true; break;
+						}
+					}
+					// If we didn't find a match, exclude the event
+					if (empty($match)) { $exclude = true; }
+				}
+			}
 	
 			// Don't just set $exclude equal to these expressions; it might evaluate false but true might have been passed in!
 			// Are we hiding private events?
@@ -1593,7 +1614,7 @@ if (!class_exists('R34ICS')) {
 					$exclude = true;
 				}
 			}
-	
+				
 			return $exclude;
 		}
 		
@@ -1671,24 +1692,25 @@ if (!class_exists('R34ICS')) {
 				'ajax' => (get_option('r34ics_ajax_by_default') ?: r34ics_boolean_check($ajax)),
 				'arrayonly' => r34ics_boolean_check($arrayonly),
 				'attach' => (
-					in_array($attach, array('0','false','1','true','image','download'))
-						? $attach
+					in_array(strtolower($attach), array('0','false','1','true','image','download'))
+						? strtolower($attach)
 						: ''
 					),
 				'basicauth' => r34ics_boolean_check($basicauth),
+				'category' => $category,
 				'color' => $color,
 				'columnlabels' => (
-					in_array($columnlabels, array('full','short','min'))
-						? $columnlabels
+					in_array(strtolower($columnlabels), array('full','short','min'))
+						? strtolower($columnlabels)
 						: (r34ics_boolean_check($nomobile) ? 'short' : '')
 					),
 				'combinemultiday' => r34ics_boolean_check($combinemultiday),
 				'compact' => (
-					in_array($compact, array('0','false','1','true','mobile', 'desktop'))
-						? $compact
+					in_array(strtolower($compact), array('0','false','1','true','mobile', 'desktop'))
+						? strtolower($compact)
 						: ''
 					),
-				'count' => intval($count),
+				'count' => abs(intval($count)),
 				'curlopts' => false, // Deprecated
 				'customoptions' => explode('|', $customoptions),
 				'debug' => (
@@ -1706,8 +1728,8 @@ if (!class_exists('R34ICS')) {
 				'eventdl' => (r34ics_boolean_check($eventdl) && !r34ics_boolean_check($basicauth)),
 				'eventlocaltime' => r34ics_boolean_check($eventlocaltime),
 				'extendmultiday' => (
-					in_array($extendmultiday, array('both', 'overnight', 'allday'))
-						? $extendmultiday
+					in_array(strtolower($extendmultiday), array('both', 'overnight', 'allday'))
+						? strtolower($extendmultiday)
 						: (r34ics_boolean_check($extendmultiday) ? 'allday' : '')
 					),
 				'feedlabel' => $feedlabel,
@@ -1741,13 +1763,13 @@ if (!class_exists('R34ICS')) {
 				'legacyparser' => r34ics_boolean_check($legacyparser),
 				'legendinline' => false, // Deprecated
 				'legendposition' => (
-					in_array($legendposition, array('above','below'))
-						? $legendposition
+					in_array(strtolower($legendposition), array('above','below'))
+						? strtolower($legendposition)
 						: null
 					),
 				'legendstyle' => (
-					in_array($legendstyle, array('block','inline','none'))
-						? $legendstyle
+					in_array(strtolower($legendstyle), array('block','inline','none'))
+						? strtolower($legendstyle)
 						: (r34ics_boolean_check($legendinline) ? 'inline' : null)
 					),
 				'limitdays' => (
@@ -1759,20 +1781,20 @@ if (!class_exists('R34ICS')) {
 				'linebreakfix' => r34ics_boolean_check($linebreakfix),
 				'linktitles' => r34ics_boolean_check($linktitles),
 				'location' => (
-					in_array($location, array('maplinks'))
-						? $location
+					in_array(strtolower($location), array('maplinks'))
+						? strtolower($location)
 						: r34ics_boolean_check($location)
 					),
 				'mapsource' => (
-					in_array($mapsource, array('google', 'bing', 'openstreetmap'))
-						? $mapsource
+					in_array(strtolower($mapsource), array('google', 'bing', 'openstreetmap'))
+						? strtolower($mapsource)
 						: 'google'
 				),
 				'maskinfo' => $maskinfo,
 				'method' => false, // Deprecated
 				'monthnav' => (
-					in_array($monthnav, array('arrows','select','both','compact'))
-						? $monthnav
+					in_array(strtolower($monthnav), array('arrows','select','both','compact','none'))
+						? strtolower($monthnav)
 						: null
 					),
 				'nolink' => r34ics_boolean_check($nolink),
@@ -1781,13 +1803,13 @@ if (!class_exists('R34ICS')) {
 				'nostyle' => r34ics_boolean_check($nostyle),
 				'organizer' => r34ics_boolean_check($organizer),
 				'pagination' => (
-					intval($pagination)
-						? intval($pagination)
-						: r34ics_boolean_check($pagination)
+					strtolower($pagination) == 'true'
+						? 5 // Default to 5 if input value is literally the text string 'true'
+						: abs(intval($pagination))
 					),
 				'paginationposition' => (
-					in_array($paginationposition, array('above','below','both'))
-						? $paginationposition
+					in_array(strtolower($paginationposition), array('above','below','both'))
+						? strtolower($paginationposition)
 						: (r34ics_boolean_check($pagination) ? 'above' : null)
 					),
 				'pastdays' => intval($pastdays),
@@ -1797,10 +1819,10 @@ if (!class_exists('R34ICS')) {
 						: intval(r34ics_boolean_check($reload))
 					),
 				'resources' => r34ics_boolean_check($resources),
-				'reverse' => (in_array($view, (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
+				'reverse' => (in_array(strtolower($view), (array)$this->get_list_style_views()) && r34ics_boolean_check($reverse)),
 				'sametab' => (
-					in_array($sametab, array('local','all','none'))
-						? $sametab
+					in_array(strtolower($sametab), array('local','all','none'))
+						? strtolower($sametab)
 						: (r34ics_boolean_check($sametab) ? 'all' : 'local')
 					),
 				'showendtimes' => r34ics_boolean_check($showendtimes),
@@ -1810,7 +1832,7 @@ if (!class_exists('R34ICS')) {
 				'solidcolors' => r34ics_boolean_check($solidcolors),
 				'startdate' => (
 					$startdate == 'today'
-					|| (empty($startdate) && $view == 'week' && $limitdays > 7)
+					|| (empty($startdate) && strtolower($view) == 'week' && $limitdays > 7)
 						? r34ics_date('Ymd', null, null, '-' . intval($pastdays) . ' days')
 						: intval($startdate)
 					),
@@ -1824,8 +1846,8 @@ if (!class_exists('R34ICS')) {
 				),
 				'title' => $title,
 				'toggle' => (
-					in_array($toggle, array('lightbox'))
-						? $toggle
+					in_array(strtolower($toggle), array('lightbox'))
+						? strtolower($toggle)
 						: r34ics_boolean_check($toggle)
 					),
 				'tz' => $tz,
@@ -1835,7 +1857,7 @@ if (!class_exists('R34ICS')) {
 						: r34ics_boolean_check($ua)
 				),
 				'url' => $url,
-				'view' => (in_array($view, (array)$this->views) ? $view : 'month'),
+				'view' => (in_array(strtolower($view), (array)$this->views) ? strtolower($view) : 'month'),
 				'weeknumbers' => r34ics_boolean_check($weeknumbers),
 				'whitetext' => r34ics_boolean_check($whitetext),
 			);
@@ -1843,7 +1865,7 @@ if (!class_exists('R34ICS')) {
 			// Workaround: Adjust limitdays to compensate for pastdays when startdate is current date
 			// @todo This is due to the 10.6 change to 'pastdays' default; work out a permanent fix!
 			if (get_option('r34ics_use_new_defaults_10_6')) {
-				if ((empty($startdate) || $startdate == 'today') && intval($pastdays) > intval($limitdays)) {
+				if ((empty($startdate) || strtolower($startdate) == 'today') && intval($pastdays) > intval($limitdays)) {
 					$args['limitdays'] = intval($limitdays) + intval($pastdays);
 				}
 			}
@@ -2148,12 +2170,12 @@ if (!class_exists('R34ICS')) {
 		}
 		
 		
-		protected function _date_events_sort($events) {
+		protected function _date_events_sort($events, $view='month') {
 			// Sort the event subarrays by time (key)
 			ksort($events);
 			// Sort each time slot's events alphabetically by the event label (title)
 			foreach (array_keys((array)$events) as $time) {
-				uasort($events[$time], function($a, $b) {
+				uasort($events[$time], function($a, $b) use ($view) {
 					// If one event is multi-day and the other isn't, always put multi-day first
 					if (!empty($a['multiday']) && empty($b['multiday'])) {
 						return -1;
@@ -2161,9 +2183,23 @@ if (!class_exists('R34ICS')) {
 					elseif (empty($a['multiday']) && !empty($b['multiday'])) {
 						return 1;
 					}
-					// If both are multi-day, sort by start date
+					// If both are multi-day...
 					elseif (!empty($a['multiday']) && !empty($b['multiday'])) {
-						return strcmp(($a['multiday']['start_date'] ?? ''), ($b['multiday']['start_date'] ?? ''));
+						// Do they both start on the same day?
+						if ($a['multiday']['start_date'] == $b['multiday']['start_date']) {
+							// If this is a list-style view, sort by earliest end date
+							if (in_array(($view ?: ''), $this->list_style_views)) {
+								return strcmp(($a['multiday']['end_date'] ?? ''), ($b['multiday']['end_date'] ?? ''));
+							}
+							// If this is not a list-style view, sort by latest end date, for better combinemultiday output
+							else {
+								return strcmp(($b['multiday']['end_date'] ?? ''), ($a['multiday']['end_date'] ?? ''));
+							}
+						}
+						// ...otherwise, sort by start date
+						else {
+							return strcmp(($a['multiday']['start_date'] ?? ''), ($b['multiday']['start_date'] ?? ''));
+						}
 					}
 					// If neither is multi-day, sort alphabetically by label
 					return strcmp(($a['label'] ?? ''), ($b['label'] ?? ''));

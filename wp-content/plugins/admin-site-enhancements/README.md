@@ -5,7 +5,7 @@ Donate link: https://bowo.io/asenha-sp-rdm
 Tags: enhancements, tweaks, optimizations, tools  
 Requires at least: 4.6  
 Tested up to: 6.7.2  
-Stable tag: 7.8.2  
+Stable tag: 7.8.5.1  
 Requires PHP: 5.6  
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -49,7 +49,7 @@ _"ASE is an amazing plugin! **Time and money saver**. Thank you!"_ ~[Iulian Baci
 
 ### Content Management
 
-* **[[ASE Pro](https://www.wpase.com/rdme-to-web)] Custom Content Types**. Conveniently register and edit custom post types (CPT), custom taxonomies, custom field groups and options pages that integrates with Bricks, Breakdance, Oxygen and Elementor, and also compatible with Gutenberg and various block themes and plugins. This is an alternative for ACF Pro, Meta Box, Toolset, Pods or JetEngine.
+* **[[ASE Pro](https://www.wpase.com/rdme-to-web)] Custom Content Types**. Conveniently register and edit custom post types (CPT), custom taxonomies, custom field groups and options pages that integrates with Bricks, Breakdance, Oxygen and Elementor, and also compatible with Gutenberg and various block themes and plugins. You can also easily create a frontend posting form. This is an alternative for ACF Pro, Meta Box, Toolset, Pods or JetEngine.
 * **Content Duplication**. One-click duplication of pages, posts and CPTs. [ASE Pro](https://www.wpase.com/rdme-to-web) enables duplication only for certain user roles and post types, and adds location option for duplication link.
 * **Content Order**. Enable custom ordering of various post types that are hierarchical or support page attributes, in wp-admin. [ASE Pro](https://www.wpase.com/rdme-to-web) enables ordering of post types that are non-hierarchical and does not support page attributes, including media / attachments. It also enable toggling taxonomy terms and / or excerpt on the ordering page and applying the custom order on the frontend including for adjacent posts navigation.
 * **[[ASE Pro](https://www.wpase.com/rdme-to-web)] Terms Order**. Enable custom ordering of terms from various taxonomies in wp-admin and on the frontend.
@@ -196,45 +196,38 @@ ASE does not officially support multisite. Please use at your own risk. That sai
 
 ## Changelog
 
-**Admin and Site Enhancements (ASE) v1.0.0** was released on October 17, 2022. Since then, there have been **78 _major_ releases** (e.g. 1.1.0 ) and **139 _minor_ releases** (e.g. 4.9.1), for a **total of 218 releases**.
+**Admin and Site Enhancements (ASE) v1.0.0** was released on October 17, 2022. Since then, there have been **78 _major_ releases** (e.g. 1.1.0 ) and **143 _minor_ releases** (e.g. 4.9.1), for a **total of 221 releases**.
 
 Each **_major release_** usually corresponds with the addition of one new module/feature. Each module/feature usually is the equivalent of one (or more) single-purpose plugin. Each **_minor release_** usually contain one or more bugfix or improvements to existing modules/features.
 
 [**Upgrade to ASE Pro**](https://www.wpase.com/chnlg-to-web). Lifetime Deal (LTD) available.
 
-### 7.8.2 (2025.03.17) - ASE Free and Pro
+### 7.8.5.1 (2025.04.08) - ASE Free
 
-* **[ADDED in Free and Pro] Disable Components >> Disable Smaller Components**: added an option to disable the Application Passwords feature in WordPress. Props to [DJABHipHop](https://wordpress.org/support/users/pressthemes1/) for [suggesting this](https://wordpress.org/support/topic/add-options-to-disable-wp_is_application_passwords_available/).
+* **[FIXED in Free] Admin Interface >> Admin Menu Organizer**: fixed an issue where saving changes in the new Admin Menu Organizer settings page (Settings >> Admin Menu) resulted in a 400 (bad request) HTML error. Props to [@mrmatteastwood](https://wordpress.org/support/users/mrmatteastwood/), [@wikis](https://wordpress.org/support/users/wikis/), [@anamazon](https://wordpress.org/support/users/anamazon/), [@tazmandev](https://wordpress.org/support/users/tazmandev/) and [@overspeed99](https://wordpress.org/support/users/overspeed99/) for swiftly [reporting the issue](https://wordpress.org/support/topic/admin-menu-cant-be-saved/) and sharing details that led to this fix.
 
-* **[IMPROVED in Pro] Optimizations >> Image Upload Control**: add an option to disable generation of intermediate sizes. Props to Wilbert S., [@visedfaq](https://wordpress.org/support/topic/feature-suggestion-remove-image-sizes/), [@bradhazel](https://wordpress.org/support/topic/feature-request-i-have-two/), Stijn V., Jake H. and [@luislu](https://wordpress.org/support/topic/add-function-to-disable-thumbnail-size/) for suggesting this feature.
+### 7.8.5 (2025.04.07) - ASE Free
 
-* **[IMPROVED in Pro] Content Management >> Custom Content Types >> Custom Field Groups**: 
-  * **Added a new field type: time**. This has been integrated with Oxygen (classic), Bricks, Breakdance and Elementor. [Documentation](https://www.wpase.com/documentation/custom-field-types/) has also been updated. Props to Jim R. and Rlaf L. for prompting this imprvement.
-  * **Improved color field**. Color picker now supports transparency, which outputs the color in RGBA format, e.g. rgba(108, 19, 135, 0.9). Non-transparent color will be in HEX format, e.g. #333333.
-  * **Improved UI for relationship field**. Posts are now categorized under the post type label, and the post type label preppended on the selected posts. This is especially useful if you have multiple post types enabled. Props to @yankiara for suggesting this improvement.
-  * **Improved UI for term field**. Terms are now categorized under the taxonomy label, and the taxonomy label preppended on the selected terms.
-  * **Improved UI for user field**. Will now include display name and email address. This makes it easier to search / filter users.
+* **[IMPROVED in Pro] Security >> CAPTCHA Protection**: add an Advanced Options section for ALTCHA where you can set custom text for the different steps in the verification process. This can be useful if you need to quickly translate the default text. Props to @betaplus, Linda H. and Marcellus J. for prompting this improvement.
 
-* **[CHANGED and IMPROVED in Pro] Admin Interface >> Admin Columns Manager**: 
-  * **Added rendering of column values for the new time field in ASE** custom field groups.
-  * Added "!important" for the "overflow-y:hidden" attribute for the #list-table-wrapper div, to **better guarantee horizontal scrolling will work** when other CSS rules try to override this attribute.
+* **[IMPROVED and FIXED in Pro] Utilities >> Form Builder**: 
+  * **Added an option to hide the form after successful submission**. This can be configured under form Settings >> Confirmation >> Confirmation Type >> Success Message. Props to Ignazio D.M. for prompting this improvement.
+  * **Fixed layout issues on style template editor**. Fixed style editor not being full-width and the Publish button being contained in wide white box.
 
-* **[FIXED and IMPROVED in Pro] Utilities >> Form Builder**:
-  * **Added option to not save form submissions** in the database. This may be useful for scenarios where privacy is of a concern. Props to Marcellus J. for suggesting this.
-  * **Added option to set which field of each form to use for previewing entries** on the Entries listing page. This should make the Entries page more useful.
-  * **Added #page_url tag as possible default value of hidden field** which will be replaced by the permalink of the page where the form is being displayed on. This is useful for when you need to track where form submission is coming from. Props to Ralf L. for suggesting this improvement.
-  * **Fixed an issue where Screen Options panel is gone** from all admin pages when Form Builder is enabled. Props to Susanne R. for reporting the issue.
+* **[IMPROVED in Free and Pro] Log In/Out & Register >> Change Login URL**: added handling for an issue when Gravity Forms is active and someone tries to open a URL that contains the `gf_page` parameter, e.g. to preview a form, while not being logged-in, it would then redirect to the custom login URL. That will now be prevented and the user will be redirected to the homepage instead. Props to Coan Z. for reporting this.
   
-* **[FIXED in Pro] Security >> CAPTCHA Protection**: fixed PHP warning related to displaying CAPTCHA widgets on the comment form as reported by @betaplus.
+* **[CHANGED in Free and Pro] Admin Interface >> Admin Menu Organizer**: moved the admin menu settings to a separate Admin Menu page/item under Settings. This will help prevent an issue where saving changes to ASE settings failed as [reported by @BooMeranGz](https://wordpress.org/support/topic/apache-mod_security-waf-problems/). This also improves the usability of the menu organizer for sites with lots of menu items, especially when drag-and-dropping menu item to reposition it.
 
-* **[FIXED in Pro] Admin Interface >> Admin Menu Organizer**: fixed a PHP fatal error when clicking on Yootheme menu icon, which uncommonly, links to an AJAX call URL. Props to Àlex M. for reporting the error with the complete error stack trace and facilitating the troubleshooting process.
+* **[FIXED in Pro] Log In/Out & Register >> Last Login Column**: fixed conflict with WPGridBuilder causing user filtering to not work properly in WPGridBuilder. Props to Stuart McK. for reporting the issue and facilitating the troubleshooting process.
 
-* **[FIXED in Pro] Content Management >> Content Order**: fixed a PHP error that breaks AJAX-filtering using JetSmartFilters. Props to Stijn V. for reporting the issue and facilitating the troubleshooting process.
+* **[FIXED in Pro] Content Managmenent >> Media Categories**: 
+  * fixed an issue where a PHP notice, "Function \_load_textdomain_just_in_time was called incorrectly", was being triggerred in a certain scenario. Props to Wilbert S. for reporting the issue and facilitating the troubleshooting process.
+  * fixed a fatal error that occurs in a certain scenario when Breakdance is active and a logged-in user is trying to view the frontend. Props to Darren L. for reporting it and facilitating the troubleshooting process.
 
 * **[TRANSLATION in Free and Pro]** ASE is now being translated into [31 languages](https://translate.wpase.com/):
   * **Added new/improved translation** for:
-    * ASE Free: updated Ukrainian, Spanish (Spain), Spanish (Chile), Portuguese (Brazil), Polish, Norwegian, Dutch
-    * ASE Pro: updated Arabic, Norwegian, Hungarian, Polish, Romanian, Portuguese (Brazil). Polish, Portuguese (Brazil) and Romanian are 100% translated. Special kudos to [Jarosław K.]((https://profiles.wordpress.org/kosmity/)), [Valdemir M.](https://profiles.wordpress.org/valdemirmaran/) and [Catalin T.](https://profiles.wordpress.org/catalinx777/) for the huge work of translating the new Form Builder module!
+    * ASE Free: updated Vietnamese, Ukrainian, Spansih (Spain), Portuguese (Brazil), Polish, Indonesian, Hungarian, German, Dutch
+    * ASE Pro: updated Vietnamese. Special kudos to [Hoang Hxn](https://profiles.wordpress.org/nguyenquanghoang/) for the huge work of translating the new Form Builder module!
   * **More strings have been internationalized**. @Translators, please visit the respective project pages for the Free and Pro versions to translate the new strings, if you havent' done so already.
   * **Interested to help translate or improve the translation?** Please go to [https://translate.wpase.com](https://translate.wpase.com) for more info.
   * **Chinese (China)**: ASE Free and Pro (completed). Props to [@bricksvip](https://profiles.wordpress.org/bricksvip/) et al.

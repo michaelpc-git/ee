@@ -320,15 +320,18 @@ function r34ics_init(elem) {
 		jQuery('.ics-calendar.layout-list, .ics-calendar.layout-basic').each(function() {
 			jQuery(this).find('.ics-calendar-pagination:not(:first-child)').hide();
 			jQuery(this).find('.ics-calendar-paginate.prev').hide();
-			// Find and display the current week (it will have data-rel2today="today" or be the last data-rel2today="past")
-			if (jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').length == 0) {
-				jQuery(this).find('.ics-calendar-pagination[data-rel2today="past"]').last().attr('data-rel2today', 'today');
-			}
-			var current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]');
-			if (typeof current_page.data('page') != 'undefined' && current_page.data('page') != 0) {
-				jQuery(this).find('.ics-calendar-pagination:first-child').hide();
-				current_page.show();
-				jQuery('.ics-calendar-paginate.prev').show();
+			// For "reverse," we just show the first page (so we're done here)
+			if (!jQuery(this).hasClass('reverse')) {
+				// Find and display the current week (it will have data-rel2today="today" or be the last data-rel2today="past")
+				if (jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]').length == 0) {
+					jQuery(this).find('.ics-calendar-pagination[data-rel2today="past"]').last().attr('data-rel2today', 'today');
+				}
+				var current_page = jQuery(this).find('.ics-calendar-pagination[data-rel2today="today"]');
+				if (typeof current_page.data('page') != 'undefined' && current_page.data('page') != 0) {
+					jQuery(this).find('.ics-calendar-pagination:first-child').hide();
+					current_page.show();
+					jQuery('.ics-calendar-paginate.prev').show();
+				}
 			}
 		});
 		r34ics_show_hide_headers();

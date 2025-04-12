@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ICS Calendar\n"
-"POT-Creation-Date: 2025-01-03 12:25-0600\n"
-"PO-Revision-Date: 2025-01-03 12:26-0600\n"
+"POT-Creation-Date: 2025-03-07 08:58-0600\n"
+"PO-Revision-Date: 2025-03-07 09:00-0600\n"
 "Last-Translator: Scott Anderson <scott@room34.com>\n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:291
+#: class-r34ics.php:292
 #, php-format
 msgid ""
 "%1$sYou are running ICS Calendar in a WordPress Playground implementation."
@@ -34,7 +34,7 @@ msgstr ""
 "enkelte funksjoner ikke er tilgjengelige eller ikke fungerer som de skal."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) and HTML tags 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag
-#: class-r34ics.php:301
+#: class-r34ics.php:302
 #, php-format
 msgid ""
 "%1$sYour site is currently using a UTC offset-based timezone setting.%2$s "
@@ -51,33 +51,33 @@ msgstr ""
 "tidssone, for riktig tidsvisning. Se vår %6$sdokumentasjon%7$s for mer "
 "informasjon om dette problemet."
 
-#: class-r34ics.php:344 templates/admin/admin.php:17
+#: class-r34ics.php:345 templates/admin/admin.php:17
 #: templates/admin/utilities.php:3
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: class-r34ics.php:345 class-r34ics.php:2002 class-r34ics.php:2007
+#: class-r34ics.php:346 class-r34ics.php:2032 class-r34ics.php:2037
 #: templates/admin/admin.php:19 templates/admin/admin.php:31
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: class-r34ics.php:346 templates/admin/sidebar.php:5
+#: class-r34ics.php:347 templates/admin/sidebar.php:5
 msgid "User Guide"
 msgstr "Brukerhåndbok"
 
-#: class-r34ics.php:347 templates/admin/sidebar.php:10
+#: class-r34ics.php:348 templates/admin/sidebar.php:10
 msgid "Support"
 msgstr "Brukerstøtte"
 
-#: class-r34ics.php:349
+#: class-r34ics.php:350
 msgid "Upgrade to PRO!"
 msgstr "Oppgrader til PRO!"
 
-#: class-r34ics.php:367
+#: class-r34ics.php:368
 msgid "Show/hide all"
 msgstr "Vis/skjul alle"
 
-#: class-r34ics.php:626
+#: class-r34ics.php:629
 msgid ""
 "ICS file could not be retrieved or was empty. Please verify URL is correct, "
 "and check your php.ini configuration to verify either cURL or "
@@ -91,40 +91,40 @@ msgstr ""
 "avgrense flere nettadresser, kan det også være lurt å prøve å bruke "
 "rørtegnet i stedet. Berørt nettadresse:"
 
-#: class-r34ics.php:1062
+#: class-r34ics.php:1067
 msgid "Hide past events"
 msgstr "Skjul tidligere hendelser"
 
-#: class-r34ics.php:1063 templates/calendar-month.php:83
+#: class-r34ics.php:1068 templates/calendar-month.php:83
 #: templates/calendar-week.php:76
 msgid "Show past events"
 msgstr "Vis tidligere hendelser"
 
-#: class-r34ics.php:1141
+#: class-r34ics.php:1146
 msgid "Contact:"
 msgstr "Kontakt:"
 
-#: class-r34ics.php:1147
+#: class-r34ics.php:1152
 msgid "Resources:"
 msgstr "Ressurser:"
 
-#: class-r34ics.php:1157
+#: class-r34ics.php:1162
 msgid "Click for more..."
 msgstr "Klikk for mer..."
 
-#: class-r34ics.php:1191
+#: class-r34ics.php:1196
 msgid "Save to your calendar"
 msgstr "Lagre i kalenderen din"
 
-#: class-r34ics.php:1191
+#: class-r34ics.php:1196
 msgid "Download"
 msgstr "Last ned"
 
-#: class-r34ics.php:1296
+#: class-r34ics.php:1299
 msgid "Cancelled"
 msgstr "Kansellert"
 
-#: class-r34ics.php:1655
+#: class-r34ics.php:1684
 msgid ""
 "The \"currentweek\" shortcode attribute is deprecated. Please use "
 "view=\"week\" in your shortcode instead."
@@ -132,7 +132,7 @@ msgstr ""
 "Kortkodeattributtet currentweek er avskrevet. Bruk view=\"week\" i kortkoden "
 "i stedet."
 
-#: class-r34ics.php:1658
+#: class-r34ics.php:1687
 msgid ""
 "The \"legendinline\" shortcode attribute is deprecated. Please use "
 "legendstyle=\"inline\" in your shortcode instead."
@@ -141,19 +141,19 @@ msgstr ""
 "legendstyle=\"inline\" i kortkoden din i stedet."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1955
+#: class-r34ics.php:1985
 #, php-format
 msgid "Cleared %1$s %2$s transient(s)."
 msgstr "Fjernet %1$s %2$s forbigående(r)."
 
 #. translators: 1: Plugin name (do not translate)
-#: class-r34ics.php:1963
+#: class-r34ics.php:1993
 #, php-format
 msgid "No %1$s transients were found."
 msgstr "Ingen %1$s transienter ble funnet."
 
 #. translators: 1. Additional translation string and HTML tags 2. Additional translation string and HTML tags
-#: class-r34ics.php:2002
+#: class-r34ics.php:2032
 #, php-format
 msgid ""
 "Your feed URL appears to contain HTTP Basic Authentication credentials. Try "
@@ -162,12 +162,12 @@ msgstr ""
 "URL-adressen til feeden din ser ut til å inneholde HTTP Basic Authentication-"
 "legitimasjon. Prøv å slå av %1$s-alternativet under %2$s-fanen ovenfor."
 
-#: class-r34ics.php:2002 class-r34ics.php:2007 templates/admin/settings.php:27
+#: class-r34ics.php:2032 class-r34ics.php:2037 templates/admin/settings.php:39
 msgid "Use legacy feed request method"
 msgstr "Bruk den gamle metoden for feedforespørsel"
 
 #. translators: 1. HTML tag 2. HTML tag 3. Additional translation string and HTML tags 4. Additional translation string and HTML tags
-#: class-r34ics.php:2007
+#: class-r34ics.php:2037
 #, php-format
 msgid ""
 "If your feed URL works with our online %1$sPreview%2$s tool, try turning on "
@@ -178,7 +178,7 @@ msgstr ""
 "fanen ovenfor."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: class-r34ics.php:2014
+#: class-r34ics.php:2044
 #, php-format
 msgid ""
 "%1$sThis URL points to a file in your Media Library.%2$s While you should be "
@@ -195,19 +195,19 @@ msgstr ""
 "hvordan du får riktig URL-adresse for dynamisk feed."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2021
+#: class-r34ics.php:2051
 #, php-format
 msgid "Error: Could not resolve IP address for %1$s."
 msgstr "Feil: Kunne ikke løse IP-adressen for %1$s."
 
 #. translators: 1. Dynamic value and HTML tags
-#: class-r34ics.php:2025
+#: class-r34ics.php:2055
 #, php-format
 msgid "Resolved IP address for %1$s:"
 msgstr "Løst IP-adresse for %1$s:"
 
 #. translators: 1. HTML tag 2. HTML tag
-#: class-r34ics.php:2077
+#: class-r34ics.php:2116
 #, php-format
 msgid ""
 "%1$sSettings updated.%2$s You may need to refresh the page to see some "
@@ -216,60 +216,60 @@ msgstr ""
 "%1$s Innstillingene er oppdatert%2$s Det kan hende du må oppdatere siden for "
 "å se noen av endringene."
 
-#: class-r34ics.php:2231
+#: class-r34ics.php:2354
 msgid "calendar event"
 msgstr "kalenderhendelse"
 
-#: functions.php:716 functions.php:724 functions.php:733
+#: functions.php:880 functions.php:888 functions.php:897
 msgid "Map"
 msgstr "Kart"
 
-#: functions.php:949
+#: functions.php:1115
 msgid "Recurring event"
 msgstr "Gjentagende arrangement"
 
 #. translators: 1. Dynamic value
-#: functions.php:955
+#: functions.php:1121
 #, php-format
 msgid "Recurs every %1$s years"
 msgstr "Gjentar seg hvert %1$s år"
 
-#: functions.php:955
+#: functions.php:1121
 msgid "Recurs yearly"
 msgstr "Gjentar seg årlig"
 
 #. translators: 1. Dynamic value
-#: functions.php:959
+#: functions.php:1125
 #, php-format
 msgid "Recurs every %1$s months"
 msgstr "Gjentar seg hver %1$s måned"
 
-#: functions.php:959
+#: functions.php:1125
 msgid "Recurs monthly"
 msgstr "Gjentar seg månedlig"
 
 #. translators: 1. Dynamic value
-#: functions.php:963
+#: functions.php:1129
 #, php-format
 msgid "Recurs every %1$s weeks"
 msgstr "Gjentar seg hver %1$s uke"
 
-#: functions.php:963
+#: functions.php:1129
 msgid "Recurs weekly"
 msgstr "Gjentar seg ukentlig"
 
 #. translators: 1. Dynamic value
-#: functions.php:967
+#: functions.php:1133
 #, php-format
 msgid "Recurs every %1$s days"
 msgstr "Gjentar seg hver %1$s dag"
 
-#: functions.php:967
+#: functions.php:1133
 msgid "Recurs daily"
 msgstr "Gjentar seg daglig"
 
 #. translators: 1: Plugin name (do not translate)
-#: functions.php:1093
+#: functions.php:1279
 #, php-format
 msgid ""
 "The \"url\" property in your %1$s shortcode appears to contain HTML tags; "
@@ -282,26 +282,12 @@ msgstr ""
 "at kalenderen din ikke vises riktig som et resultat. Vennligst fjern den "
 "klikkbare lenken i kortkoden."
 
-#: functions.php:1392
+#: functions.php:1594
 msgid "The r34ics_url_get_contents() function is no longer supported."
 msgstr "Funksjonen r34ics_url_get_contents() støttes ikke lenger."
 
-#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
-#: ics-calendar.php:109
-#, php-format
-msgid ""
-"Thank you for installing %1$s. Before creating your first calendar "
-"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
-"your site language, timezone and date/time format settings are correct. See "
-"our %4$sUser Guide%5$s for more information."
-msgstr ""
-"Takk for at du installerte %1$s. Før du oppretter din første "
-"kalenderkortkode, kan du gå til siden %2$sGenerelle innstillinger%3$s og "
-"kontrollere at innstillingene for språk, tidssone og dato-/klokkeslettformat "
-"er riktige. Se vår %4$sbrukerveiledning%5$s for mer informasjon."
-
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag
-#: ics-calendar.php:156
+#: ics-calendar.php:195
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 11.0 streamlines the way ICS feed URLs are "
@@ -317,7 +303,7 @@ msgstr ""
 "nyere, kan du gå til %4$sWordPress Support Forums%5$s for å få hjelp."
 
 #. translators: 1. HTML tag 2. HTML tag 3: Plugin name (do not translate) 4. HTML tag 5. HTML tag 6. HTML tag 7. HTML tag 8. Additional translation string and HTML tags 9. HTML tag and plugin name (do not translate) 10. HTML tag
-#: ics-calendar.php:168
+#: ics-calendar.php:207
 #, php-format
 msgid ""
 "%1$sPlease note:%2$s %3$s version 10.6 changes the default options for "
@@ -335,7 +321,7 @@ msgstr ""
 "standardinnstillingene, slå på alternativet %8$s på siden "
 "%9$sinnstillinger%10$s."
 
-#: ics-calendar.php:168 templates/admin/settings.php:60
+#: ics-calendar.php:207 templates/admin/settings.php:72
 msgid "Use new parameter defaults (v.10.6)"
 msgstr "Bruk nye parameterstandarder (v.10.6)"
 
@@ -475,8 +461,8 @@ msgstr ""
 msgid "Insert %1$s"
 msgstr "Sett inn %1$s"
 
-#: templates/admin/admin.php:16 templates/admin/getting-started.php:3
-#: templates/admin/getting-started.php:12
+#: templates/admin/admin.php:16 templates/admin/getting-started.php:47
+#: templates/admin/getting-started.php:68
 msgid "Getting Started"
 msgstr "Kom i gang"
 
@@ -488,8 +474,94 @@ msgstr "Hent systemrapport"
 msgid "Save Changes"
 msgstr "Lagre endringer"
 
+#: templates/admin/getting-started.php:8
+msgid "Do even more with..."
+msgstr "Gjør enda mer med..."
+
+#: templates/admin/getting-started.php:14
+msgid "ICS Events"
+msgstr "ICS-arrangementer"
+
+#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
+#: templates/admin/getting-started.php:17
+#, php-format
+msgid ""
+"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
+"events directly in WordPress and even integrate them seamlessly with your "
+"existing feeds."
+msgstr ""
+"%1$sNy!%2$s Gjør %3$s om til et komplett kalendersystem. Opprett og "
+"administrer arrangementer direkte i WordPress, og integrer dem til og med "
+"sømløst med eksisterende feeds."
+
+#: templates/admin/getting-started.php:19
+msgid "Additional Views"
+msgstr "Ytterligere visninger"
+
+#: templates/admin/getting-started.php:20
+msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
+msgstr "Full, Up Next, Masonry, Month with Sidebar, Widget og mer."
+
+#: templates/admin/getting-started.php:21
+msgid "Customizer"
+msgstr "Tilpasser"
+
+#: templates/admin/getting-started.php:22
+msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
+msgstr ""
+"Du kan enkelt endre kalenderens fargepalett, skrifttyper og mer på hele "
+"nettstedet."
+
+#: templates/admin/getting-started.php:25
+msgid "Calendar Builder"
+msgstr "Kalenderbygger"
+
+#: templates/admin/getting-started.php:26
+msgid ""
+"Configure all calendar settings with an easy visual interface... no need to "
+"manually type shortcodes."
+msgstr ""
+"Konfigurer alle kalenderinnstillinger med et enkelt visuelt grensesnitt ... "
+"du trenger ikke å skrive inn kortkoder manuelt."
+
+#: templates/admin/getting-started.php:27
+msgid "Enhanced Features"
+msgstr "Forbedrede funksjoner"
+
+#: templates/admin/getting-started.php:28
+msgid ""
+"Additional capabilities are added to the core Month, Basic, List and Week "
+"views."
+msgstr ""
+"Kjernevisningene Måned, Grunnleggende, Liste og Uke er utvidet med flere "
+"funksjoner."
+
+#. translators: 1. Link (do not translate)
+#: templates/admin/getting-started.php:31
+#, php-format
+msgid "Visit %1$s to learn more."
+msgstr "Besøk %1$s for å finne ut mer."
+
+#: templates/admin/getting-started.php:36
+msgid "Go PRO!"
+msgstr "Gå PRO!"
+
+#. translators: 1: Plugin name (do not translate) and HTML tags 2. HTML tag 3. HTML tag 4. HTML tag 5. HTML tag
+#: templates/admin/getting-started.php:54
+#, php-format
+msgid ""
+"Thank you for installing %1$s. Before creating your first calendar "
+"shortcode, please visit your %2$sGeneral Settings%3$s page and verify that "
+"your site language, timezone and date/time format settings are correct. See "
+"our %4$sUser Guide%5$s for more information."
+msgstr ""
+"Takk for at du installerte %1$s. Før du oppretter din første "
+"kalenderkortkode, kan du gå til siden %2$sGenerelle innstillinger%3$s og "
+"kontrollere at innstillingene for språk, tidssone og dato-/klokkeslettformat "
+"er riktige. Se vår %4$sbrukerveiledning%5$s for mer informasjon."
+
 #. translators: 1. HTML tag 2. HTML tag
-#: templates/admin/getting-started.php:7
+#: templates/admin/getting-started.php:63
 #, php-format
 msgid ""
 "An extensive %1$sUser Guide%2$s is available on our website. Below are some "
@@ -499,31 +571,31 @@ msgstr ""
 "Nedenfor finner du noen hurtigkoblinger til viktige ressurser i "
 "dokumentasjonen."
 
-#: templates/admin/getting-started.php:13
+#: templates/admin/getting-started.php:69
 msgid "General WordPress Settings"
 msgstr "Generelle WordPress-innstillinger"
 
-#: templates/admin/getting-started.php:14
+#: templates/admin/getting-started.php:70
 msgid "Shortcode Overview"
 msgstr "Oversikt over kortkoder"
 
-#: templates/admin/getting-started.php:15
+#: templates/admin/getting-started.php:71
 msgid "Shortcode Builder"
 msgstr "Kortkodebygger"
 
-#: templates/admin/getting-started.php:16
+#: templates/admin/getting-started.php:72
 msgid "Shortcode Parameters Reference"
 msgstr "Referanse for kortkodeparametere"
 
-#: templates/admin/getting-started.php:17
+#: templates/admin/getting-started.php:73
 msgid "FAQs and Tips"
 msgstr "Vanlige spørsmål og tips"
 
-#: templates/admin/getting-started.php:18
+#: templates/admin/getting-started.php:74
 msgid "CSS Guide"
 msgstr "CSS-veiledning"
 
-#: templates/admin/getting-started.php:19
+#: templates/admin/getting-started.php:75
 msgid "Developer Resources"
 msgstr "Utviklerressurser"
 
@@ -551,8 +623,8 @@ msgstr ""
 "kortkoden."
 
 #: templates/admin/settings.php:9
-msgid "Bypass nonce on AJAX requests"
-msgstr "Omgå nonce på AJAX-forespørsler"
+msgid "Bypass nonce on AJAX requests (recommended with caching plugins)"
+msgstr "Omgå nonce på AJAX-forespørsler (anbefales med caching-plugins)"
 
 #. translators: 1: Plugin name (do not translate) 2: Plugin name (do not translate)
 #: templates/admin/settings.php:12
@@ -578,7 +650,7 @@ msgid "Increase memory limit when rendering calendars"
 msgstr "Øke minnegrensen ved gjengivelse av kalendere"
 
 #. translators: 1. HTML tag
-#: templates/admin/settings.php:22
+#: templates/admin/settings.php:34
 #, php-format
 msgid ""
 "If your calendar is failing to load with an \"out of memory\" fatal error, "
@@ -594,7 +666,7 @@ msgstr ""
 "å sette dette alternativet lavere enn den gjeldende standardminnegrensen på "
 "serveren din."
 
-#: templates/admin/settings.php:28
+#: templates/admin/settings.php:40
 msgid ""
 "If your site has stopped retrieving feeds after the version 11 update, turn "
 "on this option to use the legacy request method."
@@ -603,13 +675,13 @@ msgstr ""
 "oppdateringen, kan du aktivere dette alternativet for å bruke den gamle "
 "forespørselsmetoden."
 
-#: templates/admin/settings.php:32
+#: templates/admin/settings.php:44
 msgid "Allow access to these hostnames that resolve to reserved IP addresses"
 msgstr ""
 "Tillat tilgang til disse vertsnavnene som løser til reserverte IP-adresser"
 
 #. translators: 1. HTML tag 2. HTML tag 3. HTML tag 4: Plugin name (do not translate) 5. HTML tag
-#: templates/admin/settings.php:36
+#: templates/admin/settings.php:48
 #, php-format
 msgid ""
 "If your calendar server is hosted on the same physical server as your "
@@ -624,23 +696,28 @@ msgstr ""
 "Hvis du har flere kalenderservere, angir du ett vertsnavn per linje. Se "
 "%3$sdokumentasjonen%4$s%5$s for mer informasjon."
 
-#: templates/admin/settings.php:38
-msgid "Enter one hostname per line."
-msgstr "Skriv inn ett vertsnavn per linje."
+#: templates/admin/settings.php:50
+#, php-format
+msgid ""
+"Enter one hostname per line. Hostnames are the base domain name, not a full "
+"URL. %1$s For example, you would enter %2$s, not %3$s."
+msgstr ""
+"Skriv inn ett vertsnavn per linje. Vertsnavn er basisdomenenavnet, ikke en "
+"fullstendig URL-adresse. %1$s For eksempel skriver du inn %2$s, ikke %3$s."
 
-#: templates/admin/settings.php:43
+#: templates/admin/settings.php:55
 msgid "Caching"
 msgstr "Caching"
 
-#: templates/admin/settings.php:46
+#: templates/admin/settings.php:58
 msgid "Transient (cache) expiration"
 msgstr "Forbigående (cache) utløp"
 
-#: templates/admin/settings.php:46
+#: templates/admin/settings.php:58
 msgid "seconds"
 msgstr "sekunder"
 
-#: templates/admin/settings.php:47
+#: templates/admin/settings.php:59
 msgid ""
 "Sets how long calendar feed data should be cached on the server (WordPress "
 "transients) before reloading. Default is 3600 (1 hour)."
@@ -648,15 +725,15 @@ msgstr ""
 "Angir hvor lenge kalenderfeeddata skal bufres på serveren (WordPress-"
 "transienter) før lasting på nytt. Standard er 3600 (1 time)."
 
-#: templates/admin/settings.php:52
+#: templates/admin/settings.php:64
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: templates/admin/settings.php:55
+#: templates/admin/settings.php:67
 msgid "Remove \"Add ICS Calendar\" button in Classic Editor"
 msgstr "Fjern knappen \"Legg til ICS-kalender\" i Classic Editor"
 
-#: templates/admin/settings.php:56
+#: templates/admin/settings.php:68
 msgid ""
 "By default, ICS Calendar adds an \"Add ICS Calendar\" button to the toolbar "
 "above the WYSIWYG editor when using Classic Editor. Check this box to remove "
@@ -668,7 +745,7 @@ msgstr ""
 "nettsteder som bruker Block Editor (Gutenberg)."
 
 #. translators: 1: Plugin name (do not translate) 2. HTML tag 3. HTML tag
-#: templates/admin/settings.php:63
+#: templates/admin/settings.php:75
 #, php-format
 msgid ""
 "%1$s version 10.6 introduced new default values for several shortcode "
@@ -707,75 +784,6 @@ msgid ""
 msgstr ""
 "Når du kontakter kundestøtte, vennligst ta med %1$sSystemrapport%2$s fra "
 "denne siden."
-
-#: templates/admin/sidebar.php:37
-msgid "Do even more with..."
-msgstr "Gjør enda mer med..."
-
-#: templates/admin/sidebar.php:41
-msgid "ICS Events"
-msgstr "ICS-arrangementer"
-
-#. translators: 1: HTML tag 2: HTML tag 3: Plugin name (do not translate)
-#: templates/admin/sidebar.php:44
-#, php-format
-msgid ""
-"%1$sNew!%2$s Turns %3$s into a full calendar system. Create and manage "
-"events directly in WordPress and even integrate them seamlessly with your "
-"existing feeds."
-msgstr ""
-"%1$sNy!%2$s Gjør %3$s om til et komplett kalendersystem. Opprett og "
-"administrer arrangementer direkte i WordPress, og integrer dem til og med "
-"sømløst med eksisterende feeds."
-
-#: templates/admin/sidebar.php:46
-msgid "Additional Views"
-msgstr "Ytterligere visninger"
-
-#: templates/admin/sidebar.php:47
-msgid "Full, Up Next, Masonry, Month with Sidebar, Widget, and more."
-msgstr "Full, Up Next, Masonry, Month with Sidebar, Widget og mer."
-
-#: templates/admin/sidebar.php:48
-msgid "Calendar Builder"
-msgstr "Kalenderbygger"
-
-#: templates/admin/sidebar.php:49
-msgid "Configure all calendar settings with an easy visual interface."
-msgstr ""
-"Konfigurer alle kalenderinnstillinger med et enkelt visuelt grensesnitt."
-
-#: templates/admin/sidebar.php:50
-msgid "Customizer"
-msgstr "Tilpasser"
-
-#: templates/admin/sidebar.php:51
-msgid "Easily modify your calendar color palettes, fonts, and more, site-wide."
-msgstr ""
-"Du kan enkelt endre kalenderens fargepalett, skrifttyper og mer på hele "
-"nettstedet."
-
-#: templates/admin/sidebar.php:52
-msgid "Enhanced Features"
-msgstr "Forbedrede funksjoner"
-
-#: templates/admin/sidebar.php:53
-msgid ""
-"Additional capabilities are added to the core month, basic, list and week "
-"views."
-msgstr ""
-"Ytterligere funksjoner er lagt til i de grunnleggende måned-, basis-, liste- "
-"og ukevisningene."
-
-#. translators: 1. Link (do not translate)
-#: templates/admin/sidebar.php:56
-#, php-format
-msgid "Visit %1$s to learn more."
-msgstr "Besøk %1$s for å finne ut mer."
-
-#: templates/admin/sidebar.php:59
-msgid "Go PRO!"
-msgstr "Gå PRO!"
 
 #. translators: 1: Plugin name (do not translate)
 #: templates/admin/utilities.php:9
@@ -872,19 +880,19 @@ msgstr ""
 "Av hensyn til nettstedets sikkerhet må du IKKE legge ut systemrapporten i "
 "støtteforaene."
 
-#: templates/calendar-basic.php:57 templates/calendar-list.php:58
+#: templates/calendar-basic.php:55 templates/calendar-list.php:57
 msgid "No events found."
 msgstr "Ingen dager funnet."
 
-#: templates/calendar-basic.php:78 templates/calendar-list.php:79
+#: templates/calendar-basic.php:76 templates/calendar-list.php:78
 msgid "Previous Page"
 msgstr "Forrige side"
 
-#: templates/calendar-basic.php:79 templates/calendar-list.php:80
+#: templates/calendar-basic.php:77 templates/calendar-list.php:79
 msgid "Next Page"
 msgstr "Neste side"
 
-#: templates/calendar-list.php:283 templates/calendar-month.php:200
+#: templates/calendar-list.php:284 templates/calendar-month.php:200
 #: templates/calendar-week.php:209
 msgid "All Day"
 msgstr "Hele dagen"
@@ -935,6 +943,9 @@ msgstr ""
 #. Author of the plugin/theme
 msgid "Room 34 Creative Services, LLC"
 msgstr "Room 34 Creative Services, LLC"
+
+#~ msgid "Enter one hostname per line."
+#~ msgstr "Skriv inn ett vertsnavn per linje."
 
 #, php-format
 #~ msgid ""

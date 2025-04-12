@@ -16,6 +16,7 @@ return array(
     'HCaptcha\\Admin\\Events\\TableBase' => $baseDir . '/src/php/Admin/Events/TableBase.php',
     'HCaptcha\\Admin\\Notifications' => $baseDir . '/src/php/Admin/Notifications.php',
     'HCaptcha\\Admin\\PluginStats' => $baseDir . '/src/php/Admin/PluginStats.php',
+    'HCaptcha\\Admin\\Privacy' => $baseDir . '/src/php/Admin/Privacy.php',
     'HCaptcha\\Affiliates\\Login' => $baseDir . '/src/php/Affiliates/Login.php',
     'HCaptcha\\Affiliates\\Register' => $baseDir . '/src/php/Affiliates/Register.php',
     'HCaptcha\\Asgaros\\Base' => $baseDir . '/src/php/Asgaros/Base.php',

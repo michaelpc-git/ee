@@ -16,7 +16,7 @@ $ics_calendar_classes = apply_filters('r34ics_calendar_classes', null, $args, tr
 // Special handling for instances where limitdays and/or startdate are set
 // Note: This was simplified to correspond with shortcode value logic changes in v. 10.10.1 and may need more testing
 $fixed_dates = false;
-if ($args['limitdays'] > 0 && $args['limitdays'] <= 7) {
+if ($args['limitdays'] > 0 && $args['limitdays'] <= 8) {
 	$fixed_dates = true;
 	// Set startdate to today if not set
 	if (empty($args['startdate'])) {

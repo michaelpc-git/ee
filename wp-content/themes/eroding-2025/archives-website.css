@@ -1,4 +1,4 @@
 /*MOBILE-FIRST STYLING*/
-.slider {
-    margin-top: 2rem !important;
+.n2-ss-slider .n2-ss-slider-controls-absolute-center-bottom > *, .n2-ss-slider .n2-ss-slider-controls-above > * {
+    margin-bottom: 0;
 }

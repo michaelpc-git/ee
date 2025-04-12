@@ -23,13 +23,12 @@ if ($args['toggle'] === 'lightbox') {
 }
 
 // Pagination
-// If set to 1/true, default to 5 per page; if > 1, use designated value
-// @todo What if they actually want one per page?
-// Note: Events are grouped by date, so exact pagination count will be *at least* this value
 // Initial opacity depends on whether or not we are using AJAX and pagination
 $initial_opacity = 0;
 if (!empty($args['pagination'])) {
-	$pagination = ($args['pagination'] > 1) ? intval($args['pagination']) : 5;
+	$pagination = intval($args['pagination']);
+	// Don't show month headers if pagination is equal to 1
+	if ($pagination == 1) { $args['nomonthheaders'] = true; }
 }
 else {
 	$pagination = false;
@@ -230,6 +229,9 @@ else {
 								// Remove time from array if all of its events have been removed
 								if (empty($day_events[$time])) { unset($day_events[$time]); }
 
+								// Pagination?
+								// @todo Determine why this was added in the first place, as it seems to break the page!
+								//if (!empty($pagination) && $p_i >= $pagination) { echo '</div>'; $p_i = 0; $pagination_open = false; }
 							}
 					
 							// Skip day if all of its events were multi-day
@@ -358,10 +360,7 @@ else {
 								}
 							}
 							if (!empty($day_label_shown)) {
-								?>
-									</dl>
-								</div>
-								<?php
+								echo '</dl></div>';
 							}
 					
 							// Pagination?

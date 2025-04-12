@@ -9,6 +9,55 @@ namespace ASENHA\Classes;
  */
 class Admin_Menu_Organizer {
     /**
+     * Add Admin Menu item under Settings menu
+     * 
+     * @since 7.8.5
+     */
+    public function add_menu_item() {
+        add_submenu_page(
+            'options-general.php',
+            // Parent page/menu
+            __( 'Admin Menu Settings', 'admin-site-enhancements' ),
+            // Browser tab/window title
+            __( 'Admin Menu', 'admin-site-enhancements' ),
+            // Sube menu title
+            'manage_options',
+            // Minimal user capabililty
+            'admin-menu-organizer',
+            // Page slug. Shows up in URL.
+            array($this, 'add_admin_menu_settings_page')
+        );
+    }
+
+    /**
+     * Create settings page for Admin Menu
+     * 
+     * @since 7.8.5
+     */
+    public function add_admin_menu_settings_page() {
+        $render_field = new Settings_Fields_Render();
+        ?>
+        <div class="wrap admin-menu-organizer">
+            <h1 class="wp-heading-inline">Admin Menu Organizer</h1>
+            <div class="admin-menu-organizer-main">
+                <div class="admin-menu-sortables-wrapper">
+                    <?php 
+        $render_field->render_sortable_menu();
+        ?>
+                </div>
+                <div class="admin-menu-actions">
+                    <button id="amo-save-changes" class="button button-primary button-large"><?php 
+        echo __( 'Save Changes', 'admin-site-enhancements' );
+        ?></button>
+                    <div class="asenha-saving-changes" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#2271b1" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/><path fill="#2271b1" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></svg></div>
+                    <div class="asenha-changes-saved" style="display:none;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="seagreen" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.996.996 0 1 1 1.41-1.41L10 14.17l6.88-6.88a.996.996 0 1 1 1.41 1.41l-7.59 7.59a.996.996 0 0 1-1.41 0z"/></svg></div>
+                </div>
+            </div>
+        </div>
+        <?php 
+    }
+
+    /**
      * Render custom menu order
      *
      * @param $menu_order array an ordered array of menu items
@@ -17,7 +66,8 @@ class Admin_Menu_Organizer {
      */
     public function render_custom_menu_order( $menu_order ) {
         global $menu;
-        $options = get_option( ASENHA_SLUG_U );
+        $options_extra = get_option( ASENHA_SLUG_U . '_extra', array() );
+        $options = ( isset( $options_extra['admin_menu'] ) ? $options_extra['admin_menu'] : array() );
         // Get current menu order. We're not using the default $menu_order which uses index.php, edit.php as array values.
         $current_menu_order = array();
         foreach ( $menu as $menu_key => $menu_info ) {
@@ -59,7 +109,8 @@ class Admin_Menu_Organizer {
      */
     public function apply_custom_menu_item_titles() {
         global $menu;
-        $options = get_option( ASENHA_SLUG_U );
+        $options_extra = get_option( ASENHA_SLUG_U . '_extra', array() );
+        $options = ( isset( $options_extra['admin_menu'] ) ? $options_extra['admin_menu'] : array() );
         // Get custom menu item titles
         $custom_menu_titles = $options['custom_menu_titles'];
         $custom_menu_titles = explode( ',', $custom_menu_titles );
@@ -103,7 +154,8 @@ class Admin_Menu_Organizer {
             }
         }
         $posts_custom_title = $posts_default_title;
-        $options = get_option( ASENHA_SLUG_U );
+        $options_extra = get_option( ASENHA_SLUG_U . '_extra', array() );
+        $options = ( isset( $options_extra['admin_menu'] ) ? $options_extra['admin_menu'] : array() );
         $custom_menu_titles = ( isset( $options['custom_menu_titles'] ) ? explode( ',', $options['custom_menu_titles'] ) : array() );
         if ( !empty( $custom_menu_titles ) ) {
             foreach ( $custom_menu_titles as $custom_menu_title ) {
@@ -256,18 +308,22 @@ class Admin_Menu_Organizer {
         // indexed array of role slugs
         foreach ( $current_user_roles as $current_user_role ) {
             $current_user_role_capabilities = get_role( $current_user_role )->capabilities;
-            $current_user_role_capabilities = array_keys( $current_user_role_capabilities );
-            // indexed array
-            $current_user_role_capabilities = implode( ",", $current_user_role_capabilities );
-            $current_user_capabilities .= $current_user_role_capabilities;
+            if ( is_array( $current_user_role_capabilities ) ) {
+                $current_user_role_capabilities = array_keys( $current_user_role_capabilities );
+                // indexed array
+                $current_user_role_capabilities = implode( ",", $current_user_role_capabilities );
+                $current_user_capabilities .= $current_user_role_capabilities;
+            }
         }
-        $current_user_capabilities = array_unique( explode( ",", $current_user_capabilities ) );
         // Maybe show "Show All/Less" toggle
         $show_toggle_menu = false;
-        foreach ( $user_capabilities_to_show_menu_toggle_for as $user_capability_to_show_menu_toggle_for ) {
-            if ( in_array( $user_capability_to_show_menu_toggle_for, $current_user_capabilities ) ) {
-                $show_toggle_menu = true;
-                break;
+        if ( !empty( $current_user_capabilities ) ) {
+            $current_user_capabilities = array_unique( explode( ",", $current_user_capabilities ) );
+            foreach ( $user_capabilities_to_show_menu_toggle_for as $user_capability_to_show_menu_toggle_for ) {
+                if ( in_array( $user_capability_to_show_menu_toggle_for, $current_user_capabilities ) ) {
+                    $show_toggle_menu = true;
+                    break;
+                }
             }
         }
         if ( (!empty( $menu_hidden_by_toggle ) || !empty( $submenu_hidden_by_toggle )) && $show_toggle_menu ) {
@@ -315,6 +371,36 @@ class Admin_Menu_Organizer {
                 ASENHA_VERSION,
                 false
             );
+        }
+    }
+
+    /**
+     * Save admin menu via AJAX
+     * 
+     * @since 6.3.1
+     */
+    public function save_admin_menu() {
+        if ( isset( $_REQUEST ) ) {
+            if ( check_ajax_referer( 'save-menu-nonce', 'nonce', false ) ) {
+                $options_extra = get_option( ASENHA_SLUG_U . '_extra', array() );
+                $options = ( isset( $options_extra['admin_menu'] ) ? $options_extra['admin_menu'] : array() );
+                $options['custom_menu_order'] = ( isset( $_REQUEST['custom_menu_order'] ) ? $_REQUEST['custom_menu_order'] : $options['custom_menu_order'] );
+                $options['custom_menu_titles'] = ( isset( $_REQUEST['custom_menu_titles'] ) ? $_REQUEST['custom_menu_titles'] : $options['custom_menu_titles'] );
+                $options['custom_menu_hidden'] = ( isset( $_REQUEST['custom_menu_hidden'] ) ? $_REQUEST['custom_menu_hidden'] : $options['custom_menu_hidden'] );
+                $options_extra['admin_menu'] = $options;
+                // vi( $options_extra, '', 'save menu' );
+                $updated = update_option( ASENHA_SLUG_U . '_extra', $options_extra, true );
+                if ( $updated ) {
+                    $response = array(
+                        'status' => 'success',
+                    );
+                } else {
+                    $response = array(
+                        'status' => 'failed',
+                    );
+                }
+                echo json_encode( $response );
+            }
         }
     }
 

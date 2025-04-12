@@ -61,7 +61,7 @@ if ($args['toggle'] === 'lightbox') {
 	}
 	?>
 
-	<select class="ics-calendar-select<?php if (!empty($args['monthnav']) && $args['monthnav'] == 'arrows') { echo ' hidden'; } ?>" style="display: none;" autocomplete="off" data-this-month="<?php echo esc_attr($this_ym); ?>">
+	<select class="ics-calendar-select<?php if (!empty($args['monthnav']) &&  in_array($args['monthnav'], array('arrows','none'))) { echo ' hidden'; } ?>" style="display: none;" autocomplete="off" data-this-month="<?php echo esc_attr($this_ym); ?>">
 		<?php
 		// Build list from earliest to latest month
 		foreach (array_keys((array)$ics_data['events']) as $year) {
