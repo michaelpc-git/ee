@@ -37,7 +37,8 @@ td {
 	font-size: 100%!important;
 }
 .day {
-	color: #333;
+	color: white;
+	background-color: #303030 !important;
 }
 thead {
 	border: 1px solid var(--primary-accent);
