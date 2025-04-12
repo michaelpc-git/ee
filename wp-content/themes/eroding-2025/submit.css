@@ -70,6 +70,14 @@
     color: #ccff22;
 }
 
+/*Forminator form*/
+.forminator-ui.forminator-custom-form[data-design="flat"] .forminator-input-with-icon {
+    color: #666;
+}
+.forminator-ui .forminator-icon-calendar::before {
+    font-size: 1.6rem;
+}
+
 .radar-column {
      border: 5px solid transparent;
     border-image-width: 1.5 !important;
