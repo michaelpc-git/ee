@@ -218,10 +218,20 @@ box-shadow: 0 -4px 10px -3px white;
 }
 
 main {
-max-width: 1366px;
+min-height: calc(100vh - 120px);
+width: calc(100vw - 240px);
 margin-top: calc(90px + 1rem) !important;
 margin-left: calc(200px + 2rem) !important;
 margin-bottom: 0 !important;
+background-image: url(/wp-content/uploads/2025/04/websitebackground.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: right top;
+
+}
+main div {
+max-width: 1366px;
 }
 footer {
 position: fixed;
