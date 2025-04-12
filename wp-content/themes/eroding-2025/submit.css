@@ -71,6 +71,27 @@
 }
 
 /*Forminator form*/
+.forminator-ui.forminator-custom-form:not(.forminator-size--small)[data-grid="open"] .forminator-row {
+    display: flex;
+    gap: 5px;
+}
+.forminator-ui.forminator-custom-form:not(.forminator-size--small)[data-grid="open"] .forminator-col {
+    flex: 1;
+}
+.forminator-ui.forminator-custom-form[data-grid=open] .forminator-row:not(:last-child) {
+    margin-bottom: 10px;
+}
+.forminator-row div {
+    margin-bottom: 0px !important;
+}
+.forminator-field-address .forminator-row > div {
+    margin-bottom: 10px !important;
+}
+.forminator-button-upload {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
 .forminator-ui.forminator-custom-form[data-design="flat"] .forminator-input-with-icon {
     color: #666;
 }
@@ -79,6 +100,12 @@
 }
 .forminator-ui.forminator-custom-form[data-design="flat"] .forminator-button {
     width: unset;
+}
+
+.forminator-button-submit {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    width: 150px !important;
 }
 
 .radar-column {
@@ -101,6 +128,11 @@
 .SquatnetListingCreator_input input[type=submit] {
     margin-left: 19px;
 }
+
+.forminator-ui.forminator-custom-form:not(.forminator-size--small)[data-grid="open"] .forminator-row:not(:last-child) {
+    margin-bottom: 10px !important;
+}
+
 .radar-column {
     margin-top: 1rem !important;
 }
