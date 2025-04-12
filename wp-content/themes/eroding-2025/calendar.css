@@ -41,8 +41,9 @@ thead {
 	border: 1px solid var(--primary-accent);
 }
 
-.day {
-	color: black;
+ .day {
+	color: white;
+	background-color: #303030 !important;
 }
 
  .ics-calendar-month-grid td {
@@ -142,11 +143,6 @@ thead {
     .ics-calendar-month-grid th {
         text-transform: none !important;
     }
-
-    .day {
-	color: white;
-	background-color: #303030 !important;
-}
 
     .r34ics_lightbox .r34ics_lightbox_inner {
 		max-width: 1366px !important;
