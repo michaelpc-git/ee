@@ -63,7 +63,7 @@ thead {
 	border-bottom: 1px solid #333 !important;
 	text-shadow: 0 0 1px white;
 	box-shadow: inset 0 0 10px 1px var(--primary-accent);
-	border-radius: 10px;
+	border-radius: 5px;
 	margin: 2px !important;
 	border-left: 4px solid var(--primary-accent);
 	transition: 300ms ease-in-out !important;
