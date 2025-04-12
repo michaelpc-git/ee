@@ -71,6 +71,11 @@
 }
 
 /*Forminator form*/
+#forminator-module-1207:not(.select2-dropdown) {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
 .forminator-ui.forminator-custom-form:not(.forminator-size--small)[data-grid="open"] .forminator-row {
     display: flex;
     gap: 5px;
@@ -87,10 +92,6 @@
 .forminator-field-address .forminator-row > div {
     margin-bottom: 10px !important;
 }
-.forminator-button-upload {
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-}
 
 .forminator-ui.forminator-custom-form[data-design="flat"] .forminator-input-with-icon {
     color: #666;
@@ -103,8 +104,6 @@
 }
 
 .forminator-button-submit {
-    margin-left: 5px !important;
-    margin-right: 5px !important;
     width: 150px !important;
 }
 
