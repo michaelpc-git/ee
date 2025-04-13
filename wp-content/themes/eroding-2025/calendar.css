@@ -30,6 +30,7 @@ main {
 .ics-calendar-select {
 	float: right !important;
 	margin: .5em 0 .5em .5em !important;
+	font-size: 100% !important;
 }
 
 /*Calendar Styling*/
@@ -45,9 +46,12 @@ thead {
 	color: white;
 	background-color: #303030 !important;
 }
+.ics-calendar-month-grid {
+	background-color: rgba(0,0,0,0)!important;
+}
 
  .ics-calendar-month-grid td {
-	background-color: #141414;
+	background-color: rgba(20,20,20,0);
 	border: 1px solid #333 !important;
 }
 
