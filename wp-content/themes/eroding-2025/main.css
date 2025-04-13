@@ -3,6 +3,9 @@
 :root {
     --primary-accent: #9D6FF3;
     --secondary-accent: #cf2e2e;
+    --primary-background: #141414;
+    --secondary-background: #000000;
+
 }
 
 html {
