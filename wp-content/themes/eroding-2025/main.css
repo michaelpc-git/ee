@@ -243,10 +243,6 @@ z-index: 9998;
 margin-top: 80px !important;
 height: calc(100vh - 80px);
 width: 200px;
-border-right: 2px solid var(--primary-accent);
-border-top: none;
-box-shadow: 0 0 10px white;
-clip-path: inset(0px -10px 3px 0px);
 }
 .footer-nav {
 padding-top: calc(10px + 1rem);
@@ -257,6 +253,8 @@ height: 100%;
 flex-direction: column !important;
 justify-content: flex-start !important;
 gap: 1rem !important;
+border-right: 2px solid var(--primary-accent);
+border-top: none;
 }
 .nav-item {
 flex-direction: row !important;
