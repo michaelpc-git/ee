@@ -221,7 +221,7 @@ box-shadow: 0 -4px 10px -3px white;
 }
 
 main {
-min-height: calc(100vh - 120px);
+min-height: calc(100vh - 140px);
 width: calc(100vw - 240px);
 margin-top: calc(90px + 1rem) !important;
 margin-left: calc(200px + 2rem) !important;
