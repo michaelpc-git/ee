@@ -112,7 +112,8 @@ button#forminator-field-upload-1_67fad6cc8dace_button {
     border-image-outset: 5px !important;
     border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
     background-color: #fff;
-    color: #151515;
+    color: var(--secondary-background);
+    height: 100%;
 }
 .radar-column h3 {
     padding: 0;

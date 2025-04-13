@@ -3,9 +3,8 @@
 :root {
     --primary-accent: #9D6FF3;
     --secondary-accent: #cf2e2e;
-    --primary-background: #141414;
+    --primary-background: #111111;
     --secondary-background: #000000;
-
 }
 
 html {
@@ -75,6 +74,7 @@ padding-left: 0.5rem;
 padding-right: 0.5rem;
 border-top: 2px solid var(--primary-accent);
 box-shadow: 0 0 10px white;
+background-color: var(--secondary-background) !important;
 }
 .footer-nav .wp-block-tiptip-hyperlink-group-block {
 width: 100% !important;
@@ -119,7 +119,7 @@ position: absolute;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: #000;
+background-color: var(--secondary-background);
 height: 75px;
 width: 18.18% !important;
 box-shadow: 0 -4px 10px -3px white;
@@ -170,7 +170,7 @@ box-shadow: 0 -4px 10px -3px white;
 /*Pill buttons*/
 .wp-block-button a {
 	filter: drop-shadow(0 0 3px var(--primary-accent));
-    background-color: #111;
+    background-color: var(--secondary-background);
 	color: #f9f9f9;
     transition: ease-in-out 300ms;
 }

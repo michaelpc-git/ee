@@ -30,7 +30,7 @@
 .zine-weblink a{
     font-size: 0.8rem !important;
     padding: calc(.5em + 2px) calc(1em + 2px) !important;
-    background-color: #000000;
+    background-color: var(--secondary-background);
 }
 
 

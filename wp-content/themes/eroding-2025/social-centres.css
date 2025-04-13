@@ -72,7 +72,7 @@ text-shadow: -1px -1px 5px black, 1px 1px 5px black ;
     padding: calc(.5em + 2px) calc(1em + 2px) !important;
     text-shadow: none;
     font-size: 1em !important;
-    background-color: #000000;
+    background-color: var(--secondary-background);
 }
 
 /*DESKTOP STYLING*/

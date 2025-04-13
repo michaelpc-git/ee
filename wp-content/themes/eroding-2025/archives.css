@@ -8,7 +8,7 @@
     border-image-outset: 5px !important;
     border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
     padding: 1rem;
-    background-color: #000;
+    background-color: var(--secondary-background);
     height:100%;
 }
 .archive-item#sls {

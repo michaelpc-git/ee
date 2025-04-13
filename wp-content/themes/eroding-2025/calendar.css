@@ -63,7 +63,7 @@ thead {
 }
 
 .ics-calendar-month-grid .off {
-	background-color: #141414 !important;
+	background-color: rgba(0,0,0,0)!important;
 }
 .ics-calendar-month-grid ul.events li {
 	background-color: black;

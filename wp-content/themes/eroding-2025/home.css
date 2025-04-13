@@ -11,7 +11,7 @@ justify-content: space-between;
     border-image-outset: 5px !important;
     border-image: url(/wp-content/uploads/2025/02/tornpaper-full.webp) 20 round;
     background-color: #fff;
-    color: #151515;
+    color: var(--secondary-background);
 	padding: 0 1rem 1rem 1rem;
 	display: none !important;
 	transform: translateY(-100%);
@@ -64,7 +64,7 @@ margin-bottom: 0.2rem;
 text-wrap: balance;
 }
 .squat-radar-category li {
-	background-color: #000000;
+	background-color: var(--secondary-background);
 	filter: drop-shadow(0 0 3px var(--primary-accent));
 	padding: calc(.5rem + 2px) calc(1rem + 2px);
 	border-radius: 25px;
@@ -158,7 +158,7 @@ padding-right: 1rem;
 margin-bottom: 0.5rem;
 }
 .squat-radar-category li {
-	background-color: #000000;
+	background-color: var(--secondary-background);
 	filter: drop-shadow(0 0 3px var(--primary-accent));
 	padding: calc(.5rem + 2px) calc(1rem + 2px);
 	border-radius: 25px;
