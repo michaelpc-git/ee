@@ -132,6 +132,10 @@ button#forminator-field-upload-1_67fad6cc8dace_button {
     margin-bottom: 10px !important;
 }
 
+.forminator-button-submit {
+    width: 100% !important;
+}
+
 .radar-column {
     margin-top: 1rem !important;
 }
