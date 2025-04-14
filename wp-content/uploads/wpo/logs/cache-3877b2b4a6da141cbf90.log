@@ -615,3 +615,4 @@
 [2025-04-12 14:53:03 : INFO] - Full Cache Purge triggered by: plugin activation/deactivation 
 [2025-04-13 13:23:46 : INFO] - Cache for URL: http://localhost:10013/?post_type=squat&p=1217 has been purged, triggered by action: save_post 
 [2025-04-13 13:23:46 : INFO] - Cache for archive page associated with post_type: squat and Title: "Auto Draft" has been purged, triggered by action: save_post 
+[2025-04-14 15:48:53 : INFO] - Cache for URL: http://localhost:10013/archives/website/ has been purged, triggered by action: save_post 

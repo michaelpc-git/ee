@@ -2,3 +2,8 @@
 .n2-ss-slider .n2-ss-slider-controls-absolute-center-bottom > *, .n2-ss-slider .n2-ss-slider-controls-above > * {
     margin-bottom: 0;
 }
+div#n2-ss-3 .n2-ss-slider-1 {
+    border: 3px solid var(--primary-accent);
+    border-radius: 25px;
+    overflow: hidden;
+}
