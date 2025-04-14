@@ -65,6 +65,9 @@ thead {
 	border: none !important;
 	color: white !important;
 }
+.ics-calendar-month-grid > thead > tr th {
+	padding-bottom: 0.5rem !important;
+}
 
 .ics-calendar-month-grid .off {
 	background-color: rgba(0,0,0,0)!important;
