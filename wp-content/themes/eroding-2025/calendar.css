@@ -25,12 +25,16 @@ main {
 	font-size: 1.2rem;
 	line-height: 2;
 	font-weight: 600;
+	margin-left: 1rem !important;
 }
 
 .ics-calendar-select {
 	float: right !important;
-	margin: .5em 0 .5em .5em !important;
+	margin: .5em .5rem .5em .5em !important;
 	font-size: 100% !important;
+	background-color: var(--secondary-background);
+	color: white !important;
+	border-radius: 5px;
 }
 
 /*Calendar Styling*/
