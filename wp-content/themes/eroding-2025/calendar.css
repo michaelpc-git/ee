@@ -47,11 +47,14 @@ thead {
 }
 
  .day {
-	color: white;
+	color: white !important;
 	background-color: #303030 !important;
 }
 .ics-calendar-month-grid {
 	background-color: rgba(0,0,0,0)!important;
+}
+.ics-calendar-month-grid .day {
+	color: white !important;
 }
 
  .ics-calendar-month-grid td {
